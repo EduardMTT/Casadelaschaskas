@@ -92,3 +92,4 @@ C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasCh
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLa.46EE7DBE.Up2Date
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.exe
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.pdb
+C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.Frm_NuevaCategoria.resources

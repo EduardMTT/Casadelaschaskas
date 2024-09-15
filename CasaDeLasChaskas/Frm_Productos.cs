@@ -70,5 +70,12 @@ namespace CasaDeLasChaskas
         {
 
         }
+
+        private void BtnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_NuevaCategoria abrir = new Frm_NuevaCategoria();
+            abrir.ShowDialog();
+        }
     }
 }

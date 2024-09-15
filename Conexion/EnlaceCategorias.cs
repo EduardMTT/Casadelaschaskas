@@ -15,9 +15,10 @@ namespace Conexion
         {
             Conectar = new Enlace("localhost", "root", "casa_de_las_chaskas", 3306);
         }
-        public void GuardarCategoria(int ID, string Nombre)
+        public void GuardarCategoria(string Nombre)
         {
-            string Consulta = "INSERT INTO Categoria VALUES()";
+            string Consulta = string.Format("INSERT INTO Categoria VALUES(NULL,'{0}')",Nombre);
+            Conectar.EjecutarConsulta(Consulta);
         }
         public List<Entidad_Categorias> ObtenerCategorias()
         {

@@ -15,6 +15,10 @@ namespace Controlador
         {
             enlace = new EnlaceCategorias();
         }
+        public void GuardarCategoria(string Nombre)
+        {
+            enlace.GuardarCategoria(Nombre);
+        }
         public List<Entidad_Categorias> ObtenerCategorias()
         {
             return enlace.ObtenerCategorias();

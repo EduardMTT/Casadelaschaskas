@@ -106,6 +106,7 @@
             this.BtnAgregarCategoria.TabIndex = 1;
             this.BtnAgregarCategoria.Text = "Nueva Categoria";
             this.BtnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.BtnAgregarCategoria.Click += new System.EventHandler(this.BtnAgregarCategoria_Click);
             // 
             // Frm_Productos
             // 
