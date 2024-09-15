@@ -15,6 +15,10 @@ namespace Controlador
         { 
             enlace= new EnlaceProductos();
         }
+        public void EliminarProducto(int ID)
+        {
+            enlace.EliminarProducto(ID);
+        }
         public List<Entidad_Productos> ObtenerProductos(int No_Categoria)
         {
             return enlace.ObtenerProductos(No_Categoria);

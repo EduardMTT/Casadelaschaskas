@@ -20,25 +20,24 @@ namespace Conexion
         {
             var Lista = new List<Entidad_Productos>();
             var Tabla = new DataTable();
-            Tabla = Conectar.ObtenerDatos(string.Format("SELECT No_Producto,Producto,Tamaño,Precio,Imagen,FKNo_Categoria FROM categoria c " +
-                "LEFT JOIN productos p ON c.No_Categoria = p.FKNo_Categoria WHERE c.No_Categoria={0};", No_Categoria));
+                Tabla = Conectar.ObtenerDatos(string.Format("SELECT No_Producto,Producto,Tamaño,Precio,Imagen,FKNo_Categoria FROM categoria c " +
+                    "LEFT JOIN productos p ON c.No_Categoria = p.FKNo_Categoria WHERE c.No_Categoria={0};", No_Categoria));
 
-            foreach (DataRow renglon in Tabla.Rows)
-            {
-                var producto = new Entidad_Productos()
+                foreach (DataRow renglon in Tabla.Rows)
                 {
-                    No_Producto = Convert.ToInt32(renglon[0]),
-                    Producto = renglon[1].ToString(),
-                    Tamaño = renglon[2].ToString(),
-                    Precio = Convert.ToDecimal(renglon[3]),
-                    Imagen = renglon[4].ToString(),
-                    Categoria = renglon[5].ToString(),
-                };
-                Lista.Add(producto);
-            }
-            return Lista;
+                    var producto = new Entidad_Productos()
+                    {
+                        No_Producto = Convert.ToInt32(renglon[0]),
+                        Producto = renglon[1].ToString(),
+                        Tamaño = renglon[2].ToString(),
+                        Precio = Convert.ToDecimal(renglon[3]),
+                        Imagen = renglon[4].ToString(),
+                        Categoria = renglon[5].ToString(),
+                    };
+                    Lista.Add(producto);
+                }
+                return Lista;
         }
-
         public void GuardarProducto(Entidad_Productos Producto)
         {
             string Comando =string.Format("INSERT INTO Productos (Producto, Tamaño, Precio, Imagen, FKNo_Categoria) VALUES" +

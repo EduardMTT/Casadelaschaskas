@@ -69,6 +69,7 @@
             this.Controls.Add(this.BtnGuardar);
             this.Name = "Frm_NuevaCategoria";
             this.Text = "Nueva Categoria";
+            this.Load += new System.EventHandler(this.Frm_NuevaCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

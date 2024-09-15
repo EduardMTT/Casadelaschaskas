@@ -20,6 +20,18 @@ namespace Conexion
             string Consulta = string.Format("INSERT INTO Categoria VALUES(NULL,'{0}')",Nombre);
             Conectar.EjecutarConsulta(Consulta);
         }
+        public void EliminarCategoria(int ID)
+        {
+            string Consulta = string.Format("DELETE FROM Productos WHERE FKNo_Categoria = {0};", ID);
+            Conectar.EjecutarConsulta(Consulta);
+            Consulta = string.Format("DELETE FROM Categoria WHERE No_Categoria={0};", ID);
+            Conectar.EjecutarConsulta(Consulta);
+        }
+        public void ActualizarCategoria(int ID,string Nombre)
+        {
+            string Consulta = string.Format("UPDATE Categoria SET Nombre ='{0}' WHERE No_Categoria={1}",Nombre,ID);
+            Conectar.EjecutarConsulta(Consulta);
+        }
         public List<Entidad_Categorias> ObtenerCategorias()
         {
             var Lista = new List<Entidad_Categorias>();
