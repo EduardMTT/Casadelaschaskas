@@ -15,6 +15,10 @@ namespace Conexion
         {
             Conectar = new Enlace("localhost", "root", "casa_de_las_chaskas", 3306);
         }
+        public void GuardarCategoria(int ID, string Nombre)
+        {
+            string Consulta = "INSERT INTO Categoria VALUES()";
+        }
         public List<Entidad_Categorias> ObtenerCategorias()
         {
             var Lista = new List<Entidad_Categorias>();

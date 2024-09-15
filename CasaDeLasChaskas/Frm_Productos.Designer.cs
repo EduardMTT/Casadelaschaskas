@@ -30,7 +30,7 @@
         {
             this.Grid = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.TablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.PanelCategorias = new System.Windows.Forms.GroupBox();
             this.PanelBotonesC = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnAgregarCategoria = new System.Windows.Forms.Button();
@@ -42,16 +42,17 @@
             // Grid
             // 
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Location = new System.Drawing.Point(930, 135);
+            this.Grid.Location = new System.Drawing.Point(895, 36);
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersWidth = 62;
             this.Grid.RowTemplate.Height = 28;
-            this.Grid.Size = new System.Drawing.Size(240, 150);
+            this.Grid.Size = new System.Drawing.Size(263, 216);
             this.Grid.TabIndex = 5;
+            this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox1.Controls.Add(this.TablePanel);
             this.groupBox1.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(301, 12);
             this.groupBox1.Name = "groupBox1";
@@ -60,20 +61,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos";
             // 
-            // tableLayoutPanel1
+            // TablePanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 46);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 598);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.TablePanel.ColumnCount = 3;
+            this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TablePanel.Location = new System.Drawing.Point(6, 46);
+            this.TablePanel.Name = "TablePanel";
+            this.TablePanel.RowCount = 2;
+            this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TablePanel.Size = new System.Drawing.Size(582, 598);
+            this.TablePanel.TabIndex = 2;
             // 
             // PanelCategorias
             // 
@@ -89,8 +90,10 @@
             // 
             // PanelBotonesC
             // 
+            this.PanelBotonesC.AutoScroll = true;
             this.PanelBotonesC.Location = new System.Drawing.Point(4, 46);
             this.PanelBotonesC.Name = "PanelBotonesC";
+            this.PanelBotonesC.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.PanelBotonesC.Size = new System.Drawing.Size(282, 540);
             this.PanelBotonesC.TabIndex = 0;
             // 
@@ -126,7 +129,7 @@
 
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel TablePanel;
         private System.Windows.Forms.GroupBox PanelCategorias;
         private System.Windows.Forms.FlowLayoutPanel PanelBotonesC;
         private System.Windows.Forms.Button BtnAgregarCategoria;
