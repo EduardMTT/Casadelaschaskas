@@ -23,6 +23,7 @@ CREATE TABLE Venta(
 CREATE TABLE Detalles_Ventas(
 	FKID_Venta INT NOT NULL,
 	FKNo_Producto INT NOT NULL,
+	FKNo_Extra INT,
 	Cantidad_Producto INT NOT NULL,
 	Total DECIMAL(10.5) NOT NULL,
 	FOREIGN KEY(FKID_Venta) REFERENCES Venta(ID),
@@ -36,17 +37,16 @@ CREATE TABLE Frutas(
 CREATE TABLE Sabores(
 	No_Sabor INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	Nombre VARCHAR(50) NOT NULL);
-
-#Categoria creada por default
-INSERT INTO categoria VALUES(NULL,'Extras');
-/*INSERT INTO categoria VALUES(NULL,'Helados'),(NULL,'Snacks'),(NULL,'Paletas');
+	
+INSERT INTO categoria VALUES(NULL,'Helados'),(NULL,'Snacks'),(NULL,'Paletas');
 SELECT No_Producto,Producto,Tamaño,Precio,Imagen,FKNo_Categoria FROM categoria c LEFT JOIN productos p ON c.No_Categoria = p.FKNo_Categoria WHERE c.No_Categoria=2; 
 
-DELETE FROM Categoria WHERE No_Categoria=9;
-INSERT INTO Productos VALUES (NULL,'Palomitas','CHICA',24,'C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\bin\Debug\Imagenes\hacks.png',2);
+INSERT INTO Productos VALUES (NULL,'Palomitas','CHICA',24,'C:/Users/rafav/OneDrive/Escritorio/Casadelaschaskas-main/CasaDeLasChaskas/bin/Debug/Imagenes/Helado.png',2);
+INSERT INTO Productos VALUES (NULL,'Helado de chocolate','MEDIANO',20,'C:/Users/rafav/OneDrive/Escritorio/Casadelaschaskas-main/CasaDeLasChaskas/bin/Debug/Imagenes/Helado.png',1);
+INSERT INTO Productos VALUES (NULL,'Paleta de limon','CHICA',14,'C:/Users/rafav/OneDrive/Escritorio/Casadelaschaskas-main/CasaDeLasChaskas/bin/Debug/Imagenes/Helado.png',3);
 
-TRUNCATE TABLE Productos;
+SET FOREIGN_KEY_CHECKS = 1;
 
-SET FOREIGN_KEY_CHECKS = 1;*/
 
+SELECT * FROM Productos;
 

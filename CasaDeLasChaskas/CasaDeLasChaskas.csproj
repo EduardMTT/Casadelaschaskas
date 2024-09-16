@@ -52,6 +52,12 @@
     <Compile Include="Frm_ActualizarCategoria.Designer.cs">
       <DependentUpon>Frm_ActualizarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Catalogo.Designer.cs">
+      <DependentUpon>Frm_Catalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_ActualizarCategoria.resx">
       <DependentUpon>Frm_ActualizarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Catalogo.resx">
+      <DependentUpon>Frm_Catalogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
