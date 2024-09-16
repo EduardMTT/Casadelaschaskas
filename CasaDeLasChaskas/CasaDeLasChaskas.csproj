@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_ActualizarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ActualizarCategoria.Designer.cs">
+      <DependentUpon>Frm_ActualizarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Catalogo.Designer.cs">
+      <DependentUpon>Frm_Catalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NuevaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NuevaCategoria.Designer.cs">
+      <DependentUpon>Frm_NuevaCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Productos.cs">
       <SubType>Form</SubType>
@@ -60,8 +78,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_ActualizarCategoria.resx">
+      <DependentUpon>Frm_ActualizarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Catalogo.resx">
+      <DependentUpon>Frm_Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NuevaCategoria.resx">
+      <DependentUpon>Frm_NuevaCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Productos.resx">
       <DependentUpon>Frm_Productos.cs</DependentUpon>
@@ -74,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -97,6 +125,9 @@
       <Project>{76d7a9a7-0dc5-4588-9bc7-6d8b0f97bd9c}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
