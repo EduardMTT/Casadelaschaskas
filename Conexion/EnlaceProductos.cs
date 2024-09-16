@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -38,15 +39,43 @@ namespace Conexion
                 }
                 return Lista;
         }
+        /*public void ActualizarProducto(int No, string Producto, string Tamaño, double Precio, string Imagen, int FKcatego)
+        {
+            string Consulta = string.Format("UPDATE Productos SET Producto ='{0}',Tamaño='{1}',Precio={2}" +
+                "Imagen='{3}', FKNo_Categoria={4} WHERE No_Producto= {5};",Producto,Tamaño,Precio,Imagen,FKcategoria,No);
+            Conectar.EjecutarConsulta(Consulta);
+        }*/
+        public List<Entidad_Productos> ObtenerProducto(int ID)
+        {
+            var Lista = new List<Entidad_Productos>();
+            var Tabla = new DataTable();
+            string Consulta = string.Format("SELECT * FROM Productos WHERE No_Producto={0};",ID);
+            Tabla = Conectar.ObtenerDatos(Consulta);
+            foreach (DataRow Fila in Tabla.Rows)
+            {
+                var producto = new Entidad_Productos()
+                {
+                    No_Producto = int.Parse(Fila["No_Producto"].ToString()),
+                    Producto = Fila["Producto"].ToString(),
+                    Tamaño = Fila[2].ToString(),
+                    Precio = decimal.Parse(Fila["Precio"].ToString()),
+                    Imagen = Fila["Imagen"].ToString(),
+                    FKNo_Categoria = int.Parse(Fila["FKNo_Categoria"].ToString())
+                };
+                Lista.Add(producto);
+            }
+            return Lista;
+        }
         public void GuardarProducto(Entidad_Productos Producto)
         {
-            string Comando =string.Format("INSERT INTO Productos (Producto, Tamaño, Precio, Imagen, FKNo_Categoria) VALUES" +
-                "('{0}','{1}',{2},{3},{4})",Producto.Producto,Producto.Tamaño, Producto.Precio,Producto.Imagen,Producto.Categoria);
+            string Comando =string.Format("INSERT INTO Productos VALUES (NULL,'{0}','{1}',{2},'{3}',{4});",
+                Producto.Producto,Producto.Tamaño, Producto.Precio,Producto.Imagen,Producto.Categoria);
             Conectar.EjecutarConsulta(Comando);
+            Console.WriteLine(Comando);
         }
         public void EliminarProducto(int ID)
         {
-            string Comando = string.Format("Delete from Productos where No_Producto = {0}", ID);
+            string Comando = string.Format("Delete from Productos where No_Producto = {0};", ID);
             Conectar.EjecutarConsulta(Comando);
         }
     }
