@@ -19,6 +19,7 @@ namespace Conexion
         }
         public List<Entidad_Productos> ObtenerProductos(int No_Categoria)
         {
+
             var Lista = new List<Entidad_Productos>();
             var Tabla = new DataTable();
                 Tabla = Conectar.ObtenerDatos(string.Format("SELECT No_Producto,Producto,Tamaño,Precio,Imagen,FKNo_Categoria FROM categoria c " +
@@ -39,12 +40,13 @@ namespace Conexion
                 }
                 return Lista;
         }
-        /*public void ActualizarProducto(int No, string Producto, string Tamaño, double Precio, string Imagen, int FKcatego)
+        public void ActualizarProducto(Entidad_Productos productos)
         {
-            string Consulta = string.Format("UPDATE Productos SET Producto ='{0}',Tamaño='{1}',Precio={2}" +
-                "Imagen='{3}', FKNo_Categoria={4} WHERE No_Producto= {5};",Producto,Tamaño,Precio,Imagen,FKcategoria,No);
+            string Consulta = string.Format("UPDATE Productos SET Producto ='{0}',Tamaño='{1}',Precio={2}," +
+                "Imagen='{3}', FKNo_Categoria={4} WHERE No_Producto= {5};",productos.Producto,productos.Tamaño,productos.Precio,
+                productos.Imagen,productos.Categoria,productos.No_Producto);
             Conectar.EjecutarConsulta(Consulta);
-        }*/
+        }
         public List<Entidad_Productos> ObtenerProducto(int ID)
         {
             var Lista = new List<Entidad_Productos>();
@@ -66,10 +68,11 @@ namespace Conexion
             }
             return Lista;
         }
-        public void GuardarProducto(Entidad_Productos Producto)
+        public void GuardarProducto(string P,string T,decimal Pre,string I, int C)
         {
-            string Comando =string.Format("INSERT INTO Productos VALUES (NULL,'{0}','{1}',{2},'{3}',{4});",
-                Producto.Producto,Producto.Tamaño, Producto.Precio,Producto.Imagen,Producto.Categoria);
+
+            string Comando = string.Format("INSERT INTO Productos VALUES (NULL,'{0}','{1}',{2},'{3}',{4});",
+                P,T,Pre,I,C);
             Conectar.EjecutarConsulta(Comando);
             Console.WriteLine(Comando);
         }

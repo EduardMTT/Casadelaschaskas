@@ -20,9 +20,13 @@ namespace Controlador
         {
             return enlace.ObtenerProducto(ID);
         }
-        public void AgregarProducto(Entidad_Productos entidad)
+        public void ActualizarProducto(Entidad_Productos entidad)
         {
-            enlace.GuardarProducto(entidad);
+            enlace.ActualizarProducto(entidad);
+        }
+        public void AgregarProducto(string P, string T, decimal Pre, string I, int C)
+        {
+            enlace.GuardarProducto(P,T,Pre,I,C);
         }
         public void EliminarProducto(int ID)
         {

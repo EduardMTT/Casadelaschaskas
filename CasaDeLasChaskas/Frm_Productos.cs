@@ -26,15 +26,7 @@ namespace CasaDeLasChaskas
             ControlProductos = new Productos();
             _Productos = new Entidad_Productos();
         }
-        public void CargarDatos()
-        {
-            _Productos.No_Producto = 0;
-            _Productos.Producto = TxtProducto.Text.ToString();
-            _Productos.Precio = decimal.Parse(TxtCosto.Text.ToString());
-            _Productos.Tamaño = TxtTamaño.Text.ToString();
-            _Productos.Imagen = TxtRuta.Text.ToString().Replace(" ", "_");
-            _Productos.FKNo_Categoria = int.Parse(LblID.Text.ToString());
-        }
+       
         private void Frm_Productos_Load(object sender, EventArgs e)
         {
             CrearBotonesCategorias(ControlCategorias.ObtenerCategorias());
@@ -45,6 +37,9 @@ namespace CasaDeLasChaskas
             TxtProducto.Text= string.Empty;
             TxtCosto.Text= string.Empty;
             TxtTamaño.Text= string.Empty;
+            TxtRuta.Text= string.Empty;
+            Imagen.Image = null;
+            Imagen.BackgroundImage = null;
         }
         public void HabilitarElementos(bool A,bool B, bool C,bool D, bool E, bool F)
         {
@@ -70,26 +65,13 @@ namespace CasaDeLasChaskas
                 MessageBox.Show("Se cancelo la operacion", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        public void OpcionActualizar_ClickProdu(object sender, EventArgs e, int Categoria, string Nombre)
-        {
-
-        }
         private void BuscarProductos(object sender, EventArgs e, int Categoria,string Nombre)
         {
+            VaciarCajas();
             try
             {
                 LblID.Text = Categoria.ToString();
                 LblCategoria.Text = Nombre.ToString();
-                /*for (int i = 0; i < Grid.Columns.Count; i++)
-                {
-                    if (i != 5)
-                    {
-                        Grid.Columns[i].Visible = false;
-                    }
-                }
-                Grid.Columns[5].Visible = true;
-                Grid.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                Grid.Columns[5].Width = 200;*/
                 CrearBotonesProductos(ControlProductos.ObtenerProductos(Categoria));
 
             }
@@ -108,6 +90,9 @@ namespace CasaDeLasChaskas
             TxtProducto.Text=Producto.Producto.ToString();
             TxtCosto.Text = Producto.Precio.ToString();
             TxtTamaño.Text = Producto.Tamaño.ToString();
+            TxtRuta.Text = Producto.Imagen.ToString();
+            Imagen.Image = Image.FromFile(Producto.Imagen);
+            Imagen.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         public void CrearBotonesProductos(List<Entidad_Productos>productos)
         {
@@ -117,11 +102,8 @@ namespace CasaDeLasChaskas
                 Button boton = new Button();
                 ContextMenuStrip Opciones = new ContextMenuStrip();
                 ToolStripMenuItem opcionEliminar = new ToolStripMenuItem("Eliminar");
-                ToolStripMenuItem opcionActualizar = new ToolStripMenuItem("Actualizar");
                 opcionEliminar.Click += (sender, e) => OpcionEliminar_ClickProdu(sender, e,producto.No_Producto,producto.Producto,int.Parse(LblID.Text));
-                opcionActualizar.Click += (sender, e) => OpcionActualizar_ClickProdu(sender, e, producto.No_Producto,producto.Producto);
                 Opciones.Items.Add(opcionEliminar);
-                Opciones.Items.Add(opcionActualizar);
                 boton.Text = producto.Producto;
                 boton.Tag = producto.No_Producto;
                 boton.Size = new Size(140, 40);
@@ -207,11 +189,11 @@ namespace CasaDeLasChaskas
         {
             try
             {
-                CargarDatos();
-                MessageBox.Show("No Categoria:"+_Productos.FKNo_Categoria+"\nNo: "+_Productos.No_Producto+
-                    "\nProducto: "+_Productos.Producto+"\nImagen: "+_Productos.Imagen+"\nPrecio: "+_Productos.Precio+"\n"+
-                    "Tamaño: "+_Productos.Tamaño);
-                ControlProductos.AgregarProducto(_Productos);
+
+                //ESTA PARTE DEL CODIGO ES HORRIBLE PERO SOLO ASI FUNCIONABA JAJA
+                ControlProductos.AgregarProducto(TxtProducto.Text.ToString(),TxtTamaño.Text.ToString(),decimal.Parse(TxtCosto.Text.ToString()),TxtRuta.Text.Replace("¥","\\"),int.Parse(LblID.Text));
+                MessageBox.Show("Se guardo el producto correctamente!","Operacion Exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                BuscarProductos(sender,e,int.Parse(LblID.Text),LblCategoria.Text);
             }
             catch (Exception ex)
             {
@@ -228,6 +210,7 @@ namespace CasaDeLasChaskas
 
         private void BtnCargar_Click(object sender, EventArgs e)
         {
+            Imagen.BackgroundImage = null;
             using (OpenFileDialog cargararchivo = new OpenFileDialog())
             {
                 cargararchivo.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
@@ -242,11 +225,32 @@ namespace CasaDeLasChaskas
                     }
                     string targetFilePath = Path.Combine(targetDirectory, fileName);
                     File.Copy(sourceFilePath, targetFilePath, true);
-                    Imagen.BackgroundImage = new Bitmap(targetFilePath);
-                    Imagen.BackgroundImageLayout = ImageLayout.Stretch;
                     TxtRuta.Text = targetFilePath;
+                    string rutaCorrecta = TxtRuta.Text.Replace(@"¥", @"\");
+                    rutaCorrecta = rutaCorrecta.Replace(@"\", @"\\");
+                    TxtRuta.Text = rutaCorrecta;
                 }
+
+                Imagen.BackgroundImage = new Bitmap(TxtRuta.Text);
+                Imagen.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+        public void CargarDatos()
+        {
+            _Productos.No_Producto = int.Parse(TxtNo_Producto.Text);
+            _Productos.Producto = TxtProducto.Text.ToString();
+            _Productos.Tamaño = TxtTamaño.Text.ToString();
+            _Productos.Precio = decimal.Parse(TxtCosto.Text);
+            string rutaCorrecta = TxtRuta.Text.Replace(@"¥", @"\");
+            rutaCorrecta = rutaCorrecta.Replace(@"\", @"\\");
+            TxtRuta.Text = rutaCorrecta;
+            _Productos.Imagen = TxtRuta.Text;
+            _Productos.Categoria = LblID.Text;
+        }
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarDatos();
+            ControlProductos.ActualizarProducto(_Productos);
         }
     }
 }

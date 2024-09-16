@@ -36,7 +36,8 @@
             this.LblID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.TxtRuta = new System.Windows.Forms.TextBox();
+            this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.Imagen = new System.Windows.Forms.PictureBox();
             this.TxtCosto = new System.Windows.Forms.TextBox();
@@ -51,8 +52,7 @@
             this.TxtProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtNo_Producto = new System.Windows.Forms.TextBox();
-            this.BtnNuevo = new System.Windows.Forms.Button();
-            this.TxtRuta = new System.Windows.Forms.TextBox();
+            this.BtnActualizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.PanelCategorias.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -168,16 +168,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles";
             // 
-            // BtnActualizar
+            // TxtRuta
             // 
-            this.BtnActualizar.Enabled = false;
-            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualizar.Location = new System.Drawing.Point(25, 602);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(344, 36);
-            this.BtnActualizar.TabIndex = 30;
-            this.BtnActualizar.Text = "Actualizar Producto";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.TxtRuta.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRuta.Location = new System.Drawing.Point(11, 516);
+            this.TxtRuta.Name = "TxtRuta";
+            this.TxtRuta.Size = new System.Drawing.Size(366, 33);
+            this.TxtRuta.TabIndex = 31;
+            // 
+            // BtnNuevo
+            // 
+            this.BtnNuevo.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.agregar;
+            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnNuevo.Location = new System.Drawing.Point(327, 0);
+            this.BtnNuevo.Name = "BtnNuevo";
+            this.BtnNuevo.Size = new System.Drawing.Size(50, 52);
+            this.BtnNuevo.TabIndex = 7;
+            this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnGuardar
             // 
@@ -318,25 +326,17 @@
             this.TxtNo_Producto.Size = new System.Drawing.Size(153, 40);
             this.TxtNo_Producto.TabIndex = 6;
             // 
-            // BtnNuevo
+            // BtnActualizar
             // 
-            this.BtnNuevo.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.agregar;
-            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnNuevo.Location = new System.Drawing.Point(327, 0);
-            this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(50, 52);
-            this.BtnNuevo.TabIndex = 7;
-            this.BtnNuevo.UseVisualStyleBackColor = true;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
-            // 
-            // TxtRuta
-            // 
-            this.TxtRuta.Enabled = false;
-            this.TxtRuta.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRuta.Location = new System.Drawing.Point(11, 516);
-            this.TxtRuta.Name = "TxtRuta";
-            this.TxtRuta.Size = new System.Drawing.Size(366, 33);
-            this.TxtRuta.TabIndex = 31;
+            this.BtnActualizar.Enabled = false;
+            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.Location = new System.Drawing.Point(25, 602);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(344, 36);
+            this.BtnActualizar.TabIndex = 30;
+            this.BtnActualizar.Text = "Actualizar Producto";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // Frm_Productos
             // 
@@ -379,10 +379,10 @@
         private System.Windows.Forms.Button BtnCargar;
         private System.Windows.Forms.TextBox TxtCosto;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.PictureBox Imagen;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.TextBox TxtRuta;
+        private System.Windows.Forms.Button BtnActualizar;
     }
 }
