@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+//referencia para hacer la imprecion
+using System.Drawing.Printing;
 
 namespace CasaDeLasChaskas
 {
@@ -214,11 +216,6 @@ namespace CasaDeLasChaskas
 
         }
 
-        private void btn_imprimir_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             // Limpiar todas las filas y columnas del DataGridView Carrito
@@ -260,6 +257,81 @@ namespace CasaDeLasChaskas
                 // Recalcular el total después de cualquier acción
                 CalcularTotal();
             }
+        }
+
+        //Definir el evento PrintDocument y el diálogo de vista previa
+        private PrintDocument printDocument = new PrintDocument();
+        private PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            // Configurar el documento a imprimir
+            printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
+
+            // Mostrar la vista previa antes de imprimir
+            printPreviewDialog.Document = printDocument;
+            printPreviewDialog.ShowDialog();
+
+            //Limpiar tabla y total
+            Carrito.Rows.Clear();
+            txt_total.Text = "0.00";
+        }
+        private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Configurar el formato y fuente de impresión con tamaños más grandes
+            Font font = new Font("Arial", 25);
+            Font fontBold = new Font("Arial", 27, FontStyle.Bold);
+            int yPos = 100; // Posición vertical inicial
+            int leftMargin = 10; // Reducir margen izquierdo manualmente
+
+            // Título del ticket (nombre de la tienda)
+            e.Graphics.DrawString("********** CASA DE LAS CHASCAS **********", fontBold, Brushes.Black, leftMargin + 20, yPos);
+            yPos += 100; // Incremento 
+
+            // Dirección y datos de contacto
+            e.Graphics.DrawString("Dirección: Calle Falsa 123", font, Brushes.Black, leftMargin + 200, yPos);
+            yPos += 40;
+            e.Graphics.DrawString("Tel: 123456789", font, Brushes.Black, leftMargin + 200, yPos);
+            yPos += 40;
+            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), font, Brushes.Black, leftMargin + 200, yPos);
+            yPos += 100;
+
+            // Encabezados para los productos
+            e.Graphics.DrawString("Cant", fontBold, Brushes.Black, leftMargin, yPos);
+            e.Graphics.DrawString("Producto", fontBold, Brushes.Black, leftMargin + 150, yPos);
+            e.Graphics.DrawString("Tamaño", fontBold, Brushes.Black, leftMargin + 400, yPos);
+            e.Graphics.DrawString("Precio", fontBold, Brushes.Black, leftMargin + 690, yPos);
+            yPos += 100;
+
+            // Iterar sobre el carrito y dibujar cada producto
+            foreach (DataGridViewRow fila in Carrito.Rows)
+            {
+                if (fila.Cells["Producto"].Value != null)
+                {
+                    string cantidad = fila.Cells["Cantidad"].Value.ToString();
+                    string producto = fila.Cells["Producto"].Value.ToString();
+                    string tamaño = fila.Cells["Tamaño"].Value.ToString();
+                    string precio = fila.Cells["Precio"].Value.ToString();
+
+                    // Ajustar las posiciones de acuerdo al tamaño de las fuentes
+                    e.Graphics.DrawString(cantidad, font, Brushes.Black, leftMargin, yPos);
+                    e.Graphics.DrawString(producto, font, Brushes.Black, leftMargin + 125, yPos);
+                    e.Graphics.DrawString(tamaño, font, Brushes.Black, leftMargin + 375, yPos);
+                    e.Graphics.DrawString(precio, font, Brushes.Black, leftMargin + 750, yPos);
+                    yPos += 50;  // Incrementar más espacio entre filas debido al tamaño de la fuente
+                }
+            }
+
+            // Línea de separación
+            e.Graphics.DrawLine(new Pen(Color.Black), leftMargin, yPos, leftMargin + 800, yPos);
+            yPos += 20;
+
+            // Imprimir el total de la compra
+            e.Graphics.DrawString("TOTAL: " + txt_total.Text + " MXN", fontBold, Brushes.Black, leftMargin + 400, yPos);
+            yPos += 100;
+
+            // Línea final
+            e.Graphics.DrawString("¡Gracias por su compra!", fontBold, Brushes.Black, leftMargin + 40, yPos);
+            yPos += 40;
         }
     }
 }
