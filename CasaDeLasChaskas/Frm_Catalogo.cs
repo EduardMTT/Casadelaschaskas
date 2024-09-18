@@ -7,29 +7,37 @@ using System.IO;
 using System.Windows.Forms;
 //referencia para hacer la imprecion
 using System.Drawing.Printing;
+using System.Collections;
 
 namespace CasaDeLasChaskas
 {
     public partial class Frm_Catalogo : Form
     {
         Categorias ControlCategorias;
+        Ventas ControlVentas;
         Productos ControlProductos;
         Entidad_Productos _Productos;
-
+        Entidad_Ventas _Ventas;
         public Frm_Catalogo()
         {
             InitializeComponent();
             ControlCategorias = new Categorias();
             ControlProductos = new Productos();
+            ControlVentas = new Ventas();
             _Productos = new Entidad_Productos();
+            _Ventas = new Entidad_Ventas();
             TablePanelC.CellContentClick += TablePanelC_CellContentClick;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
 
 
         }
+        string fechaActual;
 
         private void Frm_Catalogo_Load(object sender, EventArgs e)
         {
+            DateTime fecha = DateTime.Today;//1
+            fechaActual = fecha.ToString("yyyy-MM-dd");//1
+            LblFecha.Text = fechaActual;//1
             // Crear las columnas para el carrito
             Carrito.Columns.Add("No_Producto", "No Producto");
             Carrito.Columns.Add("Producto", "Producto");
@@ -89,7 +97,7 @@ namespace CasaDeLasChaskas
 
         public void CrearBotonesCategorias(List<Entidad_Categorias> categorias)
         {
-            PanelBotonesC_2.Controls.Clear();
+            PanelBotonesC.Controls.Clear();
             foreach (var categoria in categorias)
             {
                 Button boton = new Button();
@@ -111,7 +119,7 @@ namespace CasaDeLasChaskas
                 // Evento click para mostrar los productos de la categoría
                 boton.Click += (sender, e) => MostrarProductosPorCategoria((int)boton.Tag);
 
-                PanelBotonesC_2.Controls.Add(boton);
+                PanelBotonesC.Controls.Add(boton);
             }
         }
 
@@ -262,8 +270,40 @@ namespace CasaDeLasChaskas
         //Definir el evento PrintDocument y el diálogo de vista previa
         private PrintDocument printDocument = new PrintDocument();
         private PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+
+        public void GuardarVentas()
+        {
+            int A = 0;
+            int totalFilas = Carrito.RowCount;
+            totalFilas = totalFilas - 1;//1
+            do//2
+            {
+                if (A == totalFilas)//3
+                {
+                    break;
+                }
+                else//4
+                {
+                    if (A == 0)
+                    {
+                        _Ventas.Fecha = LblFecha.Text;
+                        _Ventas.Cliente = TxtCliente.Text;
+                    }
+                    _Ventas.PRODUCTO = int.Parse(Carrito.Rows[A].Cells[0].Value.ToString());
+                    _Ventas.Cantidad = int.Parse(Carrito.Rows[A].Cells[4].Value.ToString());
+                    _Ventas.Total = int.Parse(Carrito.Rows[A].Cells[4].Value.ToString()) * int.Parse(Carrito.Rows[A].Cells[3].Value.ToString());
+                    ControlVentas.GuardarVenta(_Ventas);
+                    _Ventas.Fecha = string.Empty;
+                    A = A + 1;
+                }
+            } while (A < totalFilas);
+        }
         private void btn_imprimir_Click(object sender, EventArgs e)
         {
+            btn_imprimir.Enabled = false;
+            btn_cancelar.Enabled = false;
+            GuardarVentas();
+            ControlVentas.GuardarVenta(_Ventas);
             // Configurar el documento a imprimir
             printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
 
@@ -273,17 +313,21 @@ namespace CasaDeLasChaskas
 
             //Limpiar tabla y total
             Carrito.Rows.Clear();
-            txt_total.Text = "0.00";
+            txt_total.Text = string.Empty;
+            TxtPaga.Text = string.Empty;
+            TxtCambio.Text = string.Empty;
         }
         private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
             // Configurar el formato y fuente de impresión con tamaños más grandes
             Font font = new Font("Arial", 25);
             Font fontBold = new Font("Arial", 27, FontStyle.Bold);
-            int yPos = 100; // Posición vertical inicial
+            int yPos = 40; // Posición vertical inicial
             int leftMargin = 10; // Reducir margen izquierdo manualmente
 
             // Título del ticket (nombre de la tienda)
+            e.Graphics.DrawString(fechaActual, fontBold, Brushes.Black, leftMargin + 20, yPos);
+            yPos += 70;
             e.Graphics.DrawString("********** CASA DE LAS CHASCAS **********", fontBold, Brushes.Black, leftMargin + 20, yPos);
             yPos += 100; // Incremento 
 
@@ -330,8 +374,46 @@ namespace CasaDeLasChaskas
             yPos += 100;
 
             // Línea final
-            e.Graphics.DrawString("¡Gracias por su compra!", fontBold, Brushes.Black, leftMargin + 40, yPos);
+            e.Graphics.DrawString("¡Gracias por su compra "+TxtCliente.Text+"!", fontBold, Brushes.Black, leftMargin + 40, yPos);
             yPos += 40;
+        }
+
+        private void TxtPaga_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtPaga.Text != string.Empty)
+            {
+                if (double.TryParse(TxtPaga.Text.ToString(), out double o))
+                {
+                    double cambio = double.Parse(TxtPaga.Text) - double.Parse(txt_total.Text);
+                    TxtCambio.Text = cambio.ToString();
+                }
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCambio_TextChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(TxtCambio.Text.ToString(), out double a))
+            {
+                if (a >= 0)
+                {
+                    btn_imprimir.Enabled = true;
+                    btn_cancelar.Enabled = true;
+                }
+            }
+        }
+
+        private void btn_cancelar_Click_1(object sender, EventArgs e)
+        {
+            btn_imprimir.Enabled = false;
+            btn_cancelar.Enabled = false;
+            txt_total.Text = string.Empty;
+            TxtPaga.Text = string.Empty;
+            TxtCambio.Text = string.Empty;
         }
     }
 }

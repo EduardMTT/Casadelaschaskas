@@ -38,12 +38,9 @@ CREATE TABLE Sabores(
 	No_Sabor INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	Nombre VARCHAR(50) NOT NULL);
 	
-INSERT INTO categoria VALUES(NULL,'Helados'),(NULL,'Snacks'),(NULL,'Paletas');
+INSERT INTO categoria VALUES(NULL,'Extras'),(NULL,'Topings'),(NULL,'Paletas');
 SELECT No_Producto,Producto,Tamaño,Precio,Imagen,FKNo_Categoria FROM categoria c LEFT JOIN productos p ON c.No_Categoria = p.FKNo_Categoria WHERE c.No_Categoria=2; 
 
-INSERT INTO Productos VALUES (NULL,'Palomitas','CHICA',24,'C:/Users/rafav/OneDrive/Escritorio/Casadelaschaskas-main/CasaDeLasChaskas/bin/Debug/Imagenes/Helado.png',2);
-INSERT INTO Productos VALUES (NULL,'Helado de chocolate','MEDIANO',20,'C:/Users/rafav/OneDrive/Escritorio/Casadelaschaskas-main/CasaDeLasChaskas/bin/Debug/Imagenes/Helado.png',1);
-INSERT INTO Productos VALUES (NULL,'Paleta de limon','CHICA',14,'C:/Users/rafav/OneDrive/Escritorio/Casadelaschaskas-main/CasaDeLasChaskas/bin/Debug/Imagenes/Helado.png',3);
 
 SET FOREIGN_KEY_CHECKS = 1;
 
