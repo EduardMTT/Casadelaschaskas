@@ -33,5 +33,11 @@ namespace CasaDeLasChaskas
             Frm_Catalogo frm_Catalogo = new Frm_Catalogo();
             frm_Catalogo.Show();
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Ventas abrir = new Frm_Ventas();
+            abrir.Show();
+        }
     }
 }

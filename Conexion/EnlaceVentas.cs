@@ -5,6 +5,7 @@ using System.Text;
 using Entidades;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Conexion
 {
@@ -39,6 +40,50 @@ namespace Conexion
             }
             return ultimoId;
         }
+        public List<Entidad_Ventas> ObtenerVentasFiltro(string Fecha1)
+        {
+            var Lista = new List<Entidad_Ventas>();
+            var Tabla = new DataTable();
+            Tabla = Conectar.ObtenerDatos(string.Format("SELECT * FROM registro_ventas WHERE Fecha ={0}",Fecha1));
+
+            foreach (DataRow renglon in Tabla.Rows)
+            {
+                var venta = new Entidad_Ventas()
+                {
+                    Fecha = renglon[0].ToString(),
+                    Cliente = renglon[1].ToString(),
+                    NombreP = renglon[2].ToString(),
+                    Precio = double.Parse(renglon[3].ToString()),
+                    Tamaño = renglon[4].ToString(),
+                    Cantidad = int.Parse(renglon[5].ToString()),
+                    Total = double.Parse(renglon[6].ToString())
+                };
+                Lista.Add(venta);
+            }
+            return Lista;
+        }
+        public List<Entidad_Ventas> ObtenerVentas()
+        {
+            var Lista = new List<Entidad_Ventas>();
+            var Tabla = new DataTable();
+            Tabla = Conectar.ObtenerDatos("SELECT * FROM registro_ventas");
+
+            foreach (DataRow renglon in Tabla.Rows)
+            {
+                var venta = new Entidad_Ventas()
+                {
+                    Fecha = renglon[1].ToString(),
+                    Cliente = renglon[2].ToString(),
+                    NombreP = renglon[3].ToString(),
+                    Precio = double.Parse(renglon[4].ToString()),
+                    Tamaño = renglon[5].ToString(),
+                    Cantidad = int.Parse(renglon[6].ToString()),
+                    Total = double.Parse(renglon[7].ToString())
+                };
+                Lista.Add(venta);
+            }
+            return Lista;
+        }
         public void GuardarVenta(Entidad_Ventas venta)
         {
             string Consulta;
@@ -48,7 +93,16 @@ namespace Conexion
                 Conectar.EjecutarConsulta(Consulta);
             }
             int ID = ObtenerUltimoIdInsertado();
-            Consulta = string.Format("INSERT INTO detalles_ventas VALUES({0},{1},{2},{3})",ID,venta.PRODUCTO,venta.Cantidad,venta.Total);
+            Consulta = string.Format("INSERT INTO detalles_ventas VALUES({0},{1},' ',{2},{3})",ID,venta.PRODUCTO,venta.Cantidad,venta.Total);
+            Conectar.EjecutarConsulta(Consulta);
+            Consulta = "INSERT INTO registro_ventas (Fecha, Cliente, Producto, Precio, Tamaño, Cantidad_Producto, Total) " +
+                "SELECT v.Fecha, v.Cliente, " +
+                "p.Producto, p.Precio, p.Tamaño, " +
+                "dv.Cantidad_Producto, dv.Total " +
+                "FROM detalles_ventas dv " +
+                "JOIN venta v ON dv.FKID_Venta = v.ID " +
+                "JOIN productos p ON dv.FKNo_Producto = p.No_Producto " +
+                "ORDER BY v.Fecha DESC;";
             Conectar.EjecutarConsulta(Consulta);
         }
         public void EliminarCategoria(int ID)

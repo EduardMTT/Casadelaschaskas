@@ -52,13 +52,12 @@ namespace CasaDeLasChaskas
         }
         //Creacion de botones y funcionamiento por cada elemento en PRODUCTOS
         #region
-        public void OpcionEliminar_ClickProdu(object sender, EventArgs e, int IDProducto, string Nombre,int Categoria)
+        public void OpcionEliminar_ClickProdu(object sender, EventArgs e, int IDProducto, string Nombre)
         {
             if (MessageBox.Show("¿Esta seguro de eliminar este producto: " + Nombre + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ControlProductos.EliminarProducto(IDProducto);
                 MessageBox.Show("Producto Eliminado!", "Operacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CrearBotonesProductos(ControlProductos.ObtenerProductos(Categoria));
             }
             else
             {
@@ -102,7 +101,7 @@ namespace CasaDeLasChaskas
                 Button boton = new Button();
                 ContextMenuStrip Opciones = new ContextMenuStrip();
                 ToolStripMenuItem opcionEliminar = new ToolStripMenuItem("Eliminar");
-                opcionEliminar.Click += (sender, e) => OpcionEliminar_ClickProdu(sender, e,producto.No_Producto,producto.Producto,int.Parse(LblID.Text));
+                opcionEliminar.Click += (sender, e) => OpcionEliminar_ClickProdu(sender, e,producto.No_Producto,producto.Producto);
                 Opciones.Items.Add(opcionEliminar);
                 boton.Text = producto.Producto;
                 boton.Tag = producto.No_Producto;
@@ -210,7 +209,6 @@ namespace CasaDeLasChaskas
 
         private void BtnCargar_Click(object sender, EventArgs e)
         {
-            Imagen.BackgroundImage = null;
             using (OpenFileDialog cargararchivo = new OpenFileDialog())
             {
                 cargararchivo.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
@@ -229,6 +227,8 @@ namespace CasaDeLasChaskas
                     string rutaCorrecta = TxtRuta.Text.Replace(@"¥", @"\");
                     rutaCorrecta = rutaCorrecta.Replace(@"\", @"\\");
                     TxtRuta.Text = rutaCorrecta;
+                    Imagen.BackgroundImage = null;
+                    Imagen.Image = null;
                 }
 
                 Imagen.BackgroundImage = new Bitmap(TxtRuta.Text);
@@ -249,8 +249,10 @@ namespace CasaDeLasChaskas
         }
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Se actualizo el producto correctamente!\nNuevo nombre: "+TxtProducto.Text,"Operacion Exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
             CargarDatos();
             ControlProductos.ActualizarProducto(_Productos);
+            TablePanel.Controls.Clear();
         }
     }
 }
