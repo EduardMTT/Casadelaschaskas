@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Collections;
+using System.Linq.Expressions;
 
 namespace CasaDeLasChaskas
 {
@@ -90,7 +91,10 @@ namespace CasaDeLasChaskas
             TxtCosto.Text = Producto.Precio.ToString();
             TxtTamaño.Text = Producto.Tamaño.ToString();
             TxtRuta.Text = Producto.Imagen.ToString();
-            Imagen.Image = Image.FromFile(Producto.Imagen);
+            if (!string.IsNullOrEmpty(Producto.Imagen) && File.Exists(Producto.Imagen))
+            {
+                Imagen.Image = Image.FromFile(Producto.Imagen);
+            }
             Imagen.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         public void CrearBotonesProductos(List<Entidad_Productos>productos)
@@ -104,6 +108,7 @@ namespace CasaDeLasChaskas
                 opcionEliminar.Click += (sender, e) => OpcionEliminar_ClickProdu(sender, e,producto.No_Producto,producto.Producto);
                 Opciones.Items.Add(opcionEliminar);
                 boton.Text = producto.Producto;
+                boton.Font = new Font(boton.Font.FontFamily, 9);
                 boton.Tag = producto.No_Producto;
                 boton.Size = new Size(140, 40);
                 boton.Click += (sender, e) => ObtenerProducto(sender,e,producto.No_Producto);
@@ -196,7 +201,7 @@ namespace CasaDeLasChaskas
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Verifique lo siguiente:\n1.- Campos Vacios \n2.- Valores incorrectos\n","Error de Operacion", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -229,10 +234,14 @@ namespace CasaDeLasChaskas
                     TxtRuta.Text = rutaCorrecta;
                     Imagen.BackgroundImage = null;
                     Imagen.Image = null;
+                    Imagen.BackgroundImage = new Bitmap(TxtRuta.Text);
+                    Imagen.BackgroundImageLayout = ImageLayout.Stretch;
                 }
-
-                Imagen.BackgroundImage = new Bitmap(TxtRuta.Text);
-                Imagen.BackgroundImageLayout = ImageLayout.Stretch;
+                else
+                {
+                    MessageBox.Show("No se cargo ninguna imagen","Operacion Cancelada",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+               
             }
         }
         public void CargarDatos()
@@ -249,10 +258,28 @@ namespace CasaDeLasChaskas
         }
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se actualizo el producto correctamente!\nNuevo nombre: "+TxtProducto.Text,"Operacion Exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            CargarDatos();
-            ControlProductos.ActualizarProducto(_Productos);
-            TablePanel.Controls.Clear();
+            try
+            {
+                if (TxtProducto.Text != "" && TxtCosto.Text != "")
+                {
+                    CargarDatos();
+                    ControlProductos.ActualizarProducto(_Productos);
+                    MessageBox.Show("Se actualizo el producto correctamente!\nNuevo nombre: " + TxtProducto.Text, "Operacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TablePanel.Controls.Clear();
+                    VaciarCajas();
+                }
+                else
+                {
+                    MessageBox.Show("Existen campos vacios", "Error de Operacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Valores Incorrectos", "Error de Operacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
+            
         }
     }
 }

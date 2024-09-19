@@ -303,8 +303,6 @@ namespace CasaDeLasChaskas
             btn_imprimir.Enabled = false;
             btn_cancelar.Enabled = false;
             GuardarVentas();
-            ControlVentas.GuardarVenta(_Ventas);
-            // Configurar el documento a imprimir
             printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
 
             // Mostrar la vista previa antes de imprimir

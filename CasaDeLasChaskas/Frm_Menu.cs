@@ -39,5 +39,16 @@ namespace CasaDeLasChaskas
             Frm_Ventas abrir = new Frm_Ventas();
             abrir.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            Frm_Productos abrir = new Frm_Productos();
+                abrir.Show();
+        }
     }
 }

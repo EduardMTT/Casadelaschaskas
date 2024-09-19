@@ -19,6 +19,10 @@ namespace Controlador
         {
             enlace.GuardarVenta(venta);
         }
+        public double VentasTotales(string Fecha)
+        {
+           return enlace.VentasTotales(Fecha);
+        }
         public List<Entidad_Ventas> ObtenerVentasFiltro(string Fecha)
         {
             return enlace.ObtenerVentasFiltro(Fecha);

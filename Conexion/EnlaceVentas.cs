@@ -40,23 +40,23 @@ namespace Conexion
             }
             return ultimoId;
         }
-        public List<Entidad_Ventas> ObtenerVentasFiltro(string Fecha1)
+        public List<Entidad_Ventas> ObtenerVentasFiltro(string Fecha)
         {
             var Lista = new List<Entidad_Ventas>();
             var Tabla = new DataTable();
-            Tabla = Conectar.ObtenerDatos(string.Format("SELECT * FROM registro_ventas WHERE Fecha ={0}",Fecha1));
+            Tabla = Conectar.ObtenerDatos(string.Format("SELECT * FROM registro_ventas WHERE Fecha='{0}';",Fecha));
 
             foreach (DataRow renglon in Tabla.Rows)
             {
                 var venta = new Entidad_Ventas()
                 {
-                    Fecha = renglon[0].ToString(),
-                    Cliente = renglon[1].ToString(),
-                    NombreP = renglon[2].ToString(),
-                    Precio = double.Parse(renglon[3].ToString()),
-                    Tamaño = renglon[4].ToString(),
-                    Cantidad = int.Parse(renglon[5].ToString()),
-                    Total = double.Parse(renglon[6].ToString())
+                    Fecha = renglon[1].ToString(),
+                    Cliente = renglon[2].ToString(),
+                    NombreP = renglon[3].ToString(),
+                    Precio = double.Parse(renglon[4].ToString()),
+                    Tamaño = renglon[5].ToString(),
+                    Cantidad = int.Parse(renglon[6].ToString()),
+                    Total = double.Parse(renglon[7].ToString())
                 };
                 Lista.Add(venta);
             }
@@ -100,10 +100,15 @@ namespace Conexion
                 "p.Producto, p.Precio, p.Tamaño, " +
                 "dv.Cantidad_Producto, dv.Total " +
                 "FROM detalles_ventas dv " +
-                "JOIN venta v ON dv.FKID_Venta = v.ID " +
-                "JOIN productos p ON dv.FKNo_Producto = p.No_Producto " +
-                "ORDER BY v.Fecha DESC;";
+                "JOIN venta v ON dv.FKID_Venta ="+ID+
+                " JOIN productos p ON dv.FKNo_Producto = p.No_Producto WHERE Cliente= '"+venta.Cliente+"' ORDER BY v.Fecha DESC;";
             Conectar.EjecutarConsulta(Consulta);
+        }
+        public double VentasTotales(string Fecha)
+        {
+            string Consulta = string.Format("SELECT SUM(Total) FROM registro_ventas WHERE Fecha='{0}';",Fecha);
+            return Conectar.EjecutarConsultaSuma(Consulta);
+           
         }
         public void EliminarCategoria(int ID)
         {

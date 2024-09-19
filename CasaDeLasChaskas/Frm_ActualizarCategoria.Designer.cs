@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ActualizarCategoria));
             this.TxtNombreC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnActualizar = new System.Windows.Forms.Button();
@@ -45,14 +46,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 20);
+            this.label1.Size = new System.Drawing.Size(365, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "¿Cual sera el nuevo nombre de tu categoria?";
             // 
             // BtnActualizar
             // 
+            this.BtnActualizar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.Location = new System.Drawing.Point(108, 149);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(98, 35);
@@ -64,18 +67,20 @@
             // Etiqueta
             // 
             this.Etiqueta.AutoSize = true;
+            this.Etiqueta.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Etiqueta.Location = new System.Drawing.Point(154, 26);
             this.Etiqueta.Name = "Etiqueta";
-            this.Etiqueta.Size = new System.Drawing.Size(16, 20);
+            this.Etiqueta.Size = new System.Drawing.Size(18, 21);
             this.Etiqueta.TabIndex = 6;
             this.Etiqueta.Text = "x";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
+            this.label2.Size = new System.Drawing.Size(142, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Nombre anterior:";
             // 
@@ -83,12 +88,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(328, 223);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Etiqueta);
             this.Controls.Add(this.TxtNombreC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnActualizar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_ActualizarCategoria";
             this.Text = "Actualizar";
             this.Load += new System.EventHandler(this.Frm_ActualizarCategoria_Load);

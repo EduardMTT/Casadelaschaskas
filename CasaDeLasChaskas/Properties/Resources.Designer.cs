@@ -63,9 +63,9 @@ namespace CasaDeLasChaskas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap agregar {
+        internal static System.Drawing.Bitmap Chocolate {
             get {
-                object obj = ResourceManager.GetObject("agregar", resourceCulture);
+                object obj = ResourceManager.GetObject("Chocolate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

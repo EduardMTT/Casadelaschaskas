@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Productos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.PanelCategorias = new System.Windows.Forms.GroupBox();
@@ -38,6 +39,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtRuta = new System.Windows.Forms.TextBox();
             this.BtnNuevo = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.Imagen = new System.Windows.Forms.PictureBox();
             this.TxtCosto = new System.Windows.Forms.TextBox();
@@ -52,7 +54,6 @@
             this.TxtProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtNo_Producto = new System.Windows.Forms.TextBox();
-            this.BtnActualizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.PanelCategorias.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -61,11 +62,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.TablePanel);
             this.groupBox1.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(301, 12);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(301, -1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 650);
+            this.groupBox1.Size = new System.Drawing.Size(594, 663);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos";
@@ -73,6 +76,7 @@
             // TablePanel
             // 
             this.TablePanel.AutoScroll = true;
+            this.TablePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.TablePanel.ColumnCount = 3;
             this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -89,12 +93,15 @@
             // 
             // PanelCategorias
             // 
+            this.PanelCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
             this.PanelCategorias.Controls.Add(this.PanelBotonesC);
             this.PanelCategorias.Controls.Add(this.BtnAgregarCategoria);
+            this.PanelCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PanelCategorias.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelCategorias.Location = new System.Drawing.Point(1, 12);
+            this.PanelCategorias.ForeColor = System.Drawing.Color.White;
+            this.PanelCategorias.Location = new System.Drawing.Point(1, -1);
             this.PanelCategorias.Name = "PanelCategorias";
-            this.PanelCategorias.Size = new System.Drawing.Size(294, 650);
+            this.PanelCategorias.Size = new System.Drawing.Size(294, 663);
             this.PanelCategorias.TabIndex = 3;
             this.PanelCategorias.TabStop = false;
             this.PanelCategorias.Text = "Categorias";
@@ -110,7 +117,8 @@
             // 
             // BtnAgregarCategoria
             // 
-            this.BtnAgregarCategoria.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarCategoria.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarCategoria.ForeColor = System.Drawing.Color.Indigo;
             this.BtnAgregarCategoria.Location = new System.Drawing.Point(6, 595);
             this.BtnAgregarCategoria.Name = "BtnAgregarCategoria";
             this.BtnAgregarCategoria.Size = new System.Drawing.Size(282, 43);
@@ -141,6 +149,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
             this.groupBox2.Controls.Add(this.TxtRuta);
             this.groupBox2.Controls.Add(this.BtnNuevo);
             this.groupBox2.Controls.Add(this.BtnActualizar);
@@ -160,16 +169,18 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.TxtNo_Producto);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Font = new System.Drawing.Font("Yu Gothic", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(901, 12);
+            this.groupBox2.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(901, -1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(386, 644);
+            this.groupBox2.Size = new System.Drawing.Size(386, 657);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles";
             // 
             // TxtRuta
             // 
+            this.TxtRuta.Enabled = false;
             this.TxtRuta.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRuta.Location = new System.Drawing.Point(11, 516);
             this.TxtRuta.Name = "TxtRuta";
@@ -178,7 +189,7 @@
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.agregar;
+            this.BtnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.BackgroundImage")));
             this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnNuevo.Location = new System.Drawing.Point(327, 0);
             this.BtnNuevo.Name = "BtnNuevo";
@@ -187,10 +198,24 @@
             this.BtnNuevo.UseVisualStyleBackColor = true;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.Enabled = false;
+            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.Indigo;
+            this.BtnActualizar.Location = new System.Drawing.Point(25, 602);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(344, 36);
+            this.BtnActualizar.TabIndex = 30;
+            this.BtnActualizar.Text = "Actualizar Producto";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
             // BtnGuardar
             // 
             this.BtnGuardar.Enabled = false;
-            this.BtnGuardar.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.Indigo;
             this.BtnGuardar.Location = new System.Drawing.Point(25, 560);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(344, 36);
@@ -202,6 +227,7 @@
             // Imagen
             // 
             this.Imagen.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Imagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Imagen.Location = new System.Drawing.Point(206, 348);
             this.Imagen.Name = "Imagen";
             this.Imagen.Size = new System.Drawing.Size(165, 148);
@@ -238,14 +264,16 @@
             // 
             // BtnCargar
             // 
+            this.BtnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BtnCargar.Enabled = false;
-            this.BtnCargar.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar.ForeColor = System.Drawing.Color.SaddleBrown;
             this.BtnCargar.Location = new System.Drawing.Point(13, 460);
             this.BtnCargar.Name = "BtnCargar";
             this.BtnCargar.Size = new System.Drawing.Size(162, 50);
             this.BtnCargar.TabIndex = 24;
             this.BtnCargar.Text = "Cargar Imagen";
-            this.BtnCargar.UseVisualStyleBackColor = true;
+            this.BtnCargar.UseVisualStyleBackColor = false;
             this.BtnCargar.Click += new System.EventHandler(this.BtnCargar_Click);
             // 
             // LblCategoria
@@ -326,28 +354,19 @@
             this.TxtNo_Producto.Size = new System.Drawing.Size(153, 40);
             this.TxtNo_Producto.TabIndex = 6;
             // 
-            // BtnActualizar
-            // 
-            this.BtnActualizar.Enabled = false;
-            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualizar.Location = new System.Drawing.Point(25, 602);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(344, 36);
-            this.BtnActualizar.TabIndex = 30;
-            this.BtnActualizar.Text = "Actualizar Producto";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
-            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
-            // 
             // Frm_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(55)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(1444, 665);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.PanelCategorias);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Frm_Productos";
-            this.Text = "Productos";
+            this.Text = "Registro de Productos";
             this.Load += new System.EventHandler(this.Frm_Productos_Load);
             this.groupBox1.ResumeLayout(false);
             this.PanelCategorias.ResumeLayout(false);

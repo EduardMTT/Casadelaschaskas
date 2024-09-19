@@ -43,6 +43,29 @@ namespace Conexion
             }
             return Tabla;
         }
+        public double EjecutarConsultaSuma(string Consulta)
+        {
+            double resultado = 0;
+            try
+            {
+                Conectar.Open();
+                using (MySqlCommand Comando = new MySqlCommand(Consulta, Conectar))
+                {
+                    object valor = Comando.ExecuteScalar();
+                    if (valor != null && double.TryParse(valor.ToString(), out double valorDouble))
+                    {
+                        resultado = valorDouble;
+                    }
+                }
+                Conectar.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al ejecutar la consulta: " + ex.Message);
+            }
+
+            return resultado;
+        }
         public void EjecutarConsulta(string Consulta)
         {
             try

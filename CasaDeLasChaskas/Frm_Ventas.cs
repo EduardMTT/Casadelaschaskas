@@ -36,14 +36,16 @@ namespace CasaDeLasChaskas
             DtgVentas.DataSource = ControlVentas.ObtenerVentas();
             DtgVentas.Columns["PRODUCTO"].Visible = false;
             ReorganizarDATA();
+            string fechaFormateada = DT1.Value.ToString("yyyy-MM-dd");
+            LblTotal.Text = "$"+ControlVentas.VentasTotales(fechaFormateada).ToString();
         }
 
         private void DT1_ValueChanged(object sender, EventArgs e)
         {
             string fechaFormateada = DT1.Value.ToString("yyyy-MM-dd");
-            MessageBox.Show("Se cambio " + fechaFormateada);
             DtgVentas.DataSource = ControlVentas.ObtenerVentasFiltro(fechaFormateada);
             ReorganizarDATA();
+            LblTotal.Text = "$" + ControlVentas.VentasTotales(fechaFormateada).ToString();
         }
     }
 }
