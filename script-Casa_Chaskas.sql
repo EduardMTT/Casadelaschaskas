@@ -48,10 +48,10 @@ CREATE TABLE Registro_Ventas (
     Total DOUBLE(10, 2) NOT NULL
 );
 
-INSERT INTO categoria VALUES(NULL,'Helados'),(NULL,'Paletas'),(NULL,'SNACKS'),(NULL,'EXTRAS');
+/*INSERT INTO categoria VALUES(NULL,'Helados'),(NULL,'Paletas'),(NULL,'SNACKS'),(NULL,'EXTRAS');
 
 -- Insertar productos en la categoría de Helados (ID de categoría = 1)
-INSERT INTO Productos (Producto, Tamaño, Precio, Imagen, FKNo_Categoria) 
+/*INSERT INTO Productos (Producto, Tamaño, Precio, Imagen, FKNo_Categoria) 
 VALUES 
 ('Helado de Vainilla', 'Grande', 2.50, '', 1),
 ('Helado de Chocolate', 'Mediano', 2.00, '', 1),
@@ -78,7 +78,7 @@ VALUES
 ('Nachos con Queso', 'Mediano', 2.00, '', 3);
 
 -- Insertar productos en la categoría de EXTRAS (ID de categoría = 4)
-INSERT INTO Productos (Producto, Tamaño, Precio, Imagen, FKNo_Categoria) 
+/*INSERT INTO Productos (Producto, Tamaño, Precio, Imagen, FKNo_Categoria) 
 VALUES 
 ('Topping de Chocolate', 'Pequeño', 0.50, '', 4),
 ('Topping de Fresa', 'Pequeño', 0.50, '', 4),
@@ -97,3 +97,19 @@ JOIN venta v ON dv.FKID_Venta = v.ID
 JOIN productos p ON dv.FKNo_Producto = p.No_Producto ORDER BY v.Fecha DESC;*/
 SELECT SUM(Total) FROM registro_ventas WHERE Fecha='2024-09-18';
 SELECT * FROM registro_ventas;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+TRUNCATE TABLE detalles_ventas;
+TRUNCATE TABLE registro_ventas;
+TRUNCATE TABLE venta;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+SELECT v.Fecha, v.Cliente,
+       p.Producto, p.Precio, p.Tamaño,
+       dv.Cantidad_Producto, dv.Total
+FROM detalles_ventas dv
+JOIN venta v ON dv.FKID_Venta = {ID} -- Sustituir {ID} por el valor correcto
+JOIN productos p ON dv.FKNo_Producto = p.No_Producto
+WHERE v.Cliente = '{venta.Cliente}';
