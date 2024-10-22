@@ -19,7 +19,7 @@ namespace CasaDeLasChaskas
 
         private void tsm_productos_Click(object sender, EventArgs e)
         {
-            Frm_Productos abrir = new Frm_Productos();
+            Frm_Prod abrir = new Frm_Prod();
             abrir.Show();
         }
 

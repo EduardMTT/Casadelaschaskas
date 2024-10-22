@@ -196,3 +196,4 @@ D:\Mis Documentos\sist_computacionales\semestre_7\Gestion Agil de Desarrollo de 
 D:\Mis Documentos\sist_computacionales\semestre_7\Gestion Agil de Desarrollo de Software\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.exe
 D:\Mis Documentos\sist_computacionales\semestre_7\Gestion Agil de Desarrollo de Software\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.pdb
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.Frm_Ventas.resources
+C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.Frm_Prod.resources
