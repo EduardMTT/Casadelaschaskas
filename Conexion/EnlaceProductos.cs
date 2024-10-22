@@ -78,8 +78,9 @@ namespace Conexion
         }
         public void EliminarProducto(int ID)
         {
-            string Comando = string.Format("Delete from Productos where No_Producto = {0};", ID);
+            string Comando = string.Format("SET FOREIGN_KEY_CHECKS = 0; DELETE FROM Productos WHERE No_Producto = {0}; SET FOREIGN_KEY_CHECKS = 1;", ID);
             Conectar.EjecutarConsulta(Comando);
+
         }
     }
 }

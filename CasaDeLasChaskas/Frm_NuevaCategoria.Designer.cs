@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NuevaCategoria));
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNombreC = new System.Windows.Forms.TextBox();
@@ -35,7 +36,8 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(136, 194);
+            this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Location = new System.Drawing.Point(153, 171);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(98, 35);
             this.BtnGuardar.TabIndex = 0;
@@ -46,15 +48,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 48);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 20);
+            this.label1.Size = new System.Drawing.Size(401, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Como se llamara tu nueva categoria de productos";
             // 
             // TxtNombreC
             // 
-            this.TxtNombreC.Location = new System.Drawing.Point(51, 109);
+            this.TxtNombreC.Location = new System.Drawing.Point(68, 122);
             this.TxtNombreC.Name = "TxtNombreC";
             this.TxtNombreC.Size = new System.Drawing.Size(280, 26);
             this.TxtNombreC.TabIndex = 2;
@@ -63,10 +67,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 290);
+            this.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.ClientSize = new System.Drawing.Size(424, 290);
             this.Controls.Add(this.TxtNombreC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnGuardar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_NuevaCategoria";
             this.Text = "Nueva Categoria";
             this.Load += new System.EventHandler(this.Frm_NuevaCategoria_Load);
