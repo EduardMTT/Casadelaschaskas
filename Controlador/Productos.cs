@@ -24,9 +24,9 @@ namespace Controlador
         {
             enlace.ActualizarProducto(entidad);
         }
-        public void AgregarProducto(string P, string T, decimal Pre, string I, int C)
+        public void AgregarProducto(string P, string T, decimal Pre, string I,string Es, int C)
         {
-            enlace.GuardarProducto(P,T,Pre,I,C);
+            enlace.GuardarProducto(P,T,Pre,I,Es,C);
         }
         public void EliminarProducto(int ID)
         {

@@ -122,5 +122,11 @@ namespace CasaDeLasChaskas
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAgregarProductos frmAgregarProductos = new FrmAgregarProductos();
+            frmAgregarProductos.Show();
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Conexion
         Enlace Conectar;
         public EnlaceCategorias()
         {
-            Conectar = new Enlace("localhost", "root", "casa_de_las_chaskas", 3306);
+            Conectar = new Enlace("localhost", "root", "Casa_de_las_Chaskas_1", 3306);
         }
         public void GuardarCategoria(string Nombre)
         {

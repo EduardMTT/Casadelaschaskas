@@ -1,6 +1,6 @@
-DROP DATABASE Casa_de_las_Chaskas;
-CREATE DATABASE Casa_de_las_Chaskas;
-USE Casa_de_las_Chaskas;
+DROP DATABASE Casa_de_las_Chaskas_1;
+CREATE DATABASE Casa_de_las_Chaskas_1;
+USE Casa_de_las_Chaskas_1;
 
 CREATE TABLE Categoria(
 	No_Categoria INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -12,6 +12,7 @@ CREATE TABLE Productos(
 	Tamaño VARCHAR(50) NOT NULL,
 	Precio DECIMAL NOT NULL,
 	Imagen TEXT NOT NULL,
+	Estatus VARCHAR(50),
 	FKNo_Categoria INT NOT NULL,
 	FOREIGN KEY(FKNo_Categoria) REFERENCES Categoria(No_Categoria));
 	
@@ -47,6 +48,11 @@ CREATE TABLE Registro_Ventas (
     Cantidad_Producto INT NOT NULL,
     Total DOUBLE(10, 2) NOT NULL
 );
+
+INSERT INTO Categoria VALUES(NULL, 'helado');
+SELECT * FROM Categoria;
+
+SELECT * FROM productos;
 
 /*INSERT INTO categoria VALUES(NULL,'Helados'),(NULL,'Paletas'),(NULL,'SNACKS'),(NULL,'EXTRAS');
 
