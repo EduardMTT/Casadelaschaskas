@@ -96,6 +96,7 @@
     <Compile Include="Enlace.cs" />
     <Compile Include="EnlaceCategorias.cs" />
     <Compile Include="EnlaceProductos.cs" />
+    <Compile Include="EnlaceVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

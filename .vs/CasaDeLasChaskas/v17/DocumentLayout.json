@@ -1,69 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\",
+  "WorkspaceRootPath": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|c:\\users\\eduar\\desktop\\proyecto casa de las chaskas\\casadelaschaskas\\casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|d:\\mis documentos\\sist_computacionales\\semestre_7\\gestion agil de desarrollo de software\\nueva carpeta\\nueva carpeta\\casadelaschaskas-main\\casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\conexion\\enlaceproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|solutionrelative:conexion\\enlaceproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\conexion\\enlacecategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|solutionrelative:conexion\\enlacecategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\controlador\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|solutionrelative:controlador\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D7A9A7-0DC5-4588-9BC7-6D8B0F97BD9C}|Entidades\\Entidades.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\entidades\\entidad_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D7A9A7-0DC5-4588-9BC7-6D8B0F97BD9C}|Entidades\\Entidades.csproj|solutionrelative:entidades\\entidad_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\conexion\\enlace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|solutionrelative:conexion\\enlace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\controlador\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|solutionrelative:controlador\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -74,200 +46,126 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_Catalogo.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Catalogo.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs [Design]",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Catalogo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:38:57.033Z",
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Frm_Catalogo.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs",
+              "Title": "Frm_Catalogo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Catalogo.cs",
               "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Catalogo.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Catalogo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Catalogo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T18:45:03.224Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_Catalogo.cs",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Catalogo.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Catalogo.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Catalogo.cs",
               "RelativeToolTip": "CasaDeLasChaskas\\Frm_Catalogo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:44:55.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Frm_Menu.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Menu.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Menu.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAjwCEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:11:55.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Frm_Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Menu.cs",
-              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Programacion Agil\\CasaC\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\rafav\\OneDrive\\Escritorio\\Programacion Agil\\CasaC\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:11:53.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Productos.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Controlador\\Productos.cs",
-              "RelativeDocumentMoniker": "Controlador\\Productos.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Controlador\\Productos.cs",
-              "RelativeToolTip": "Controlador\\Productos.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T02:02:24.309Z"
+              "WhenOpened": "2024-10-24T19:56:25.077Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EnlaceProductos.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Conexion\\EnlaceProductos.cs",
-              "RelativeDocumentMoniker": "Conexion\\EnlaceProductos.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Conexion\\EnlaceProductos.cs",
-              "RelativeToolTip": "Conexion\\EnlaceProductos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Title": "Frm_Menu.cs",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Menu.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Menu.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Menu.cs",
+              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Menu.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAvwCAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T01:58:31.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Frm_Productos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Productos.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Productos.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Productos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Productos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T00:49:11.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Frm_Productos.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Productos.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Productos.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Productos.cs",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Productos.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAA1wGEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T16:26:00.916Z"
+              "WhenOpened": "2024-10-24T21:14:27.821Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "EnlaceCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Conexion\\EnlaceCategorias.cs",
-              "RelativeDocumentMoniker": "Conexion\\EnlaceCategorias.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Conexion\\EnlaceCategorias.cs",
-              "RelativeToolTip": "Conexion\\EnlaceCategorias.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T23:43:22.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Entidad_Productos.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Entidades\\Entidad_Productos.cs",
-              "RelativeDocumentMoniker": "Entidades\\Entidad_Productos.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Entidades\\Entidad_Productos.cs",
-              "RelativeToolTip": "Entidades\\Entidad_Productos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T01:55:37.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Enlace.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Conexion\\Enlace.cs",
-              "RelativeDocumentMoniker": "Conexion\\Enlace.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Conexion\\Enlace.cs",
-              "RelativeToolTip": "Conexion\\Enlace.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T23:49:20.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Categorias.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Controlador\\Categorias.cs",
-              "RelativeDocumentMoniker": "Controlador\\Categorias.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\Controlador\\Categorias.cs",
-              "RelativeToolTip": "Controlador\\Categorias.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAawBAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T18:06:18.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Frm_ActualizarCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
               "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
               "RelativeToolTip": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACMAAABqAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwCkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T19:53:15.961Z"
+              "WhenOpened": "2024-10-24T21:13:52.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Frm_NuevaCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Frm_Ventas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Ventas.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Ventas.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Ventas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Ventas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T18:05:29.386Z"
+              "WhenOpened": "2024-10-24T18:45:16.596Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
+              "Title": "Frm_Prod.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Prod.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Prod.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Prod.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Prod.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T18:45:14.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Frm_NuevaCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
               "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T19:47:49.772Z"
+              "WhenOpened": "2024-10-24T18:45:08.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Frm_ActualizarCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
-              "ToolTip": "C:\\Users\\eduar\\Desktop\\Proyecto Casa de las Chaskas\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "DocumentIndex": 2,
+              "Title": "Frm_Menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Menu.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Menu.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_Menu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T19:47:42.461Z"
+              "WhenOpened": "2024-10-24T18:45:06.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "ToolTip": "D:\\Mis Documentos\\sist_computacionales\\semestre_7\\Gestion Agil de Desarrollo de Software\\Nueva carpeta\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Casadelaschaskas-main\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T18:44:58.522Z"
             }
           ]
         }

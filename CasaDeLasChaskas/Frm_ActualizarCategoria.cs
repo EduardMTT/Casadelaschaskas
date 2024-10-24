@@ -37,7 +37,7 @@ namespace CasaDeLasChaskas
             {
                 ControlCategorias.ActualizarCategoria(recibir.No_Categoria, TxtNombreC.Text);
                 MessageBox.Show("Categoria Actualizada!", "Operacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Frm_Productos abrir = new Frm_Productos();
+                Frm_Prod abrir = new Frm_Prod();
                 this.Close();
                 abrir.Show();
             }

@@ -5,29 +5,39 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+//referencia para hacer la imprecion
+using System.Drawing.Printing;
+using System.Collections;
 
 namespace CasaDeLasChaskas
 {
     public partial class Frm_Catalogo : Form
     {
         Categorias ControlCategorias;
+        Ventas ControlVentas;
         Productos ControlProductos;
         Entidad_Productos _Productos;
-
+        Entidad_Ventas _Ventas;
         public Frm_Catalogo()
         {
             InitializeComponent();
             ControlCategorias = new Categorias();
             ControlProductos = new Productos();
+            ControlVentas = new Ventas();
             _Productos = new Entidad_Productos();
-            TablePanelC.CellContentClick += TablePanelC_CellContentClick;
+            _Ventas = new Entidad_Ventas();
+            //TablePanelC.CellContentClick += TablePanelC_CellContentClick;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
 
 
         }
+        string fechaActual;
 
         private void Frm_Catalogo_Load(object sender, EventArgs e)
         {
+            DateTime fecha = DateTime.Today;//1
+            fechaActual = fecha.ToString("yyyy-MM-dd");//1
+            //LblFecha.Text = fechaActual;//1
             // Crear las columnas para el carrito
             Carrito.Columns.Add("No_Producto", "No Producto");
             Carrito.Columns.Add("Producto", "Producto");
@@ -87,7 +97,7 @@ namespace CasaDeLasChaskas
 
         public void CrearBotonesCategorias(List<Entidad_Categorias> categorias)
         {
-            PanelBotonesC_2.Controls.Clear();
+            //PanelBotonesC.Controls.Clear();
             foreach (var categoria in categorias)
             {
                 Button boton = new Button();
@@ -109,7 +119,7 @@ namespace CasaDeLasChaskas
                 // Evento click para mostrar los productos de la categoría
                 boton.Click += (sender, e) => MostrarProductosPorCategoria((int)boton.Tag);
 
-                PanelBotonesC_2.Controls.Add(boton);
+                //PanelBotonesC.Controls.Add(boton);
             }
         }
 
@@ -130,7 +140,7 @@ namespace CasaDeLasChaskas
             imagenColumna.HeaderText = "Imagen";
             imagenColumna.Name = "Imagen";
             imagenColumna.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            TablePanelC.Columns.Add(imagenColumna);
+            //TablePanelC.Columns.Add(imagenColumna);
 
             // Crear una columna de botones para agregar al carrito
             DataGridViewButtonColumn botonAgregar = new DataGridViewButtonColumn();
@@ -138,7 +148,7 @@ namespace CasaDeLasChaskas
             botonAgregar.Text = "Agregar";
             botonAgregar.Name = "Agregar";
             botonAgregar.UseColumnTextForButtonValue = true;
-            TablePanelC.Columns.Add(botonAgregar);
+            //TablePanelC.Columns.Add(botonAgregar);
 
             // Obtener los productos de la categoría seleccionada
             List<Entidad_Productos> productos = ControlProductos.ObtenerProductos(categoriaId);
@@ -214,11 +224,6 @@ namespace CasaDeLasChaskas
 
         }
 
-        private void btn_imprimir_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             // Limpiar todas las filas y columnas del DataGridView Carrito
@@ -260,6 +265,153 @@ namespace CasaDeLasChaskas
                 // Recalcular el total después de cualquier acción
                 CalcularTotal();
             }
+        }
+
+        //Definir el evento PrintDocument y el diálogo de vista previa
+        private PrintDocument printDocument = new PrintDocument();
+        private PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+
+        public void GuardarVentas()
+        {
+            int A = 0;
+            int totalFilas = Carrito.RowCount;
+            totalFilas = totalFilas - 1;//1
+            do//2
+            {
+                if (A == totalFilas)//3
+                {
+                    break;
+                }
+                else//4
+                {
+                    if (A == 0)
+                    {
+                        //_Ventas.Fecha = LblFecha.Text;
+                        _Ventas.Cliente = TxtCliente.Text;
+                    }
+                    _Ventas.PRODUCTO = int.Parse(Carrito.Rows[A].Cells[0].Value.ToString());
+                    _Ventas.Cantidad = int.Parse(Carrito.Rows[A].Cells[4].Value.ToString());
+                    _Ventas.Total = int.Parse(Carrito.Rows[A].Cells[4].Value.ToString()) * int.Parse(Carrito.Rows[A].Cells[3].Value.ToString());
+                    ControlVentas.GuardarVenta(_Ventas);
+                    _Ventas.Fecha = string.Empty;
+                    A = A + 1;
+                }
+            } while (A < totalFilas);
+        }
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            btn_imprimir.Enabled = false;
+            btn_cancelar.Enabled = false;
+            GuardarVentas();
+            printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
+
+            // Mostrar la vista previa antes de imprimir
+            printPreviewDialog.Document = printDocument;
+            printPreviewDialog.ShowDialog();
+
+            //Limpiar tabla y total
+            Carrito.Rows.Clear();
+            txt_total.Text = string.Empty;
+            TxtPaga.Text = string.Empty;
+            TxtCambio.Text = string.Empty;
+        }
+        private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Configurar el formato y fuente de impresión con tamaños más grandes
+            Font font = new Font("Arial", 25);
+            Font fontBold = new Font("Arial", 27, FontStyle.Bold);
+            int yPos = 40; // Posición vertical inicial
+            int leftMargin = 10; // Reducir margen izquierdo manualmente
+
+            // Título del ticket (nombre de la tienda)
+            e.Graphics.DrawString(fechaActual, fontBold, Brushes.Black, leftMargin + 20, yPos);
+            yPos += 70;
+            e.Graphics.DrawString("********** CASA DE LAS CHASCAS **********", fontBold, Brushes.Black, leftMargin + 20, yPos);
+            yPos += 100; // Incremento 
+
+            // Dirección y datos de contacto
+            e.Graphics.DrawString("Dirección: Calle Falsa 123", font, Brushes.Black, leftMargin + 200, yPos);
+            yPos += 40;
+            e.Graphics.DrawString("Tel: 123456789", font, Brushes.Black, leftMargin + 200, yPos);
+            yPos += 40;
+            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), font, Brushes.Black, leftMargin + 200, yPos);
+            yPos += 100;
+
+            // Encabezados para los productos
+            e.Graphics.DrawString("Cant", fontBold, Brushes.Black, leftMargin, yPos);
+            e.Graphics.DrawString("Producto", fontBold, Brushes.Black, leftMargin + 150, yPos);
+            e.Graphics.DrawString("Tamaño", fontBold, Brushes.Black, leftMargin + 400, yPos);
+            e.Graphics.DrawString("Precio", fontBold, Brushes.Black, leftMargin + 690, yPos);
+            yPos += 100;
+
+            // Iterar sobre el carrito y dibujar cada producto
+            foreach (DataGridViewRow fila in Carrito.Rows)
+            {
+                if (fila.Cells["Producto"].Value != null)
+                {
+                    string cantidad = fila.Cells["Cantidad"].Value.ToString();
+                    string producto = fila.Cells["Producto"].Value.ToString();
+                    string tamaño = fila.Cells["Tamaño"].Value.ToString();
+                    string precio = fila.Cells["Precio"].Value.ToString();
+
+                    // Ajustar las posiciones de acuerdo al tamaño de las fuentes
+                    e.Graphics.DrawString(cantidad, font, Brushes.Black, leftMargin, yPos);
+                    e.Graphics.DrawString(producto, font, Brushes.Black, leftMargin + 125, yPos);
+                    e.Graphics.DrawString(tamaño, font, Brushes.Black, leftMargin + 375, yPos);
+                    e.Graphics.DrawString(precio, font, Brushes.Black, leftMargin + 750, yPos);
+                    yPos += 50;  // Incrementar más espacio entre filas debido al tamaño de la fuente
+                }
+            }
+
+            // Línea de separación
+            e.Graphics.DrawLine(new Pen(Color.Black), leftMargin, yPos, leftMargin + 800, yPos);
+            yPos += 20;
+
+            // Imprimir el total de la compra
+            e.Graphics.DrawString("TOTAL: " + txt_total.Text + " MXN", fontBold, Brushes.Black, leftMargin + 400, yPos);
+            yPos += 100;
+
+            // Línea final
+            e.Graphics.DrawString("¡Gracias por su compra "+TxtCliente.Text+"!", fontBold, Brushes.Black, leftMargin + 40, yPos);
+            yPos += 40;
+        }
+
+        private void TxtPaga_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtPaga.Text != string.Empty)
+            {
+                if (double.TryParse(TxtPaga.Text.ToString(), out double o))
+                {
+                    double cambio = double.Parse(TxtPaga.Text) - double.Parse(txt_total.Text);
+                    TxtCambio.Text = cambio.ToString();
+                }
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCambio_TextChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(TxtCambio.Text.ToString(), out double a))
+            {
+                if (a >= 0)
+                {
+                    btn_imprimir.Enabled = true;
+                    btn_cancelar.Enabled = true;
+                }
+            }
+        }
+
+        private void btn_cancelar_Click_1(object sender, EventArgs e)
+        {
+            btn_imprimir.Enabled = false;
+            btn_cancelar.Enabled = false;
+            txt_total.Text = string.Empty;
+            TxtPaga.Text = string.Empty;
+            TxtCambio.Text = string.Empty;
         }
     }
 }

@@ -70,11 +70,17 @@
     <Compile Include="Frm_NuevaCategoria.Designer.cs">
       <DependentUpon>Frm_NuevaCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Productos.cs">
+    <Compile Include="Frm_Prod.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Productos.Designer.cs">
-      <DependentUpon>Frm_Productos.cs</DependentUpon>
+    <Compile Include="Frm_Prod.Designer.cs">
+      <DependentUpon>Frm_Prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ventas.Designer.cs">
+      <DependentUpon>Frm_Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,23 +96,26 @@
     <EmbeddedResource Include="Frm_NuevaCategoria.resx">
       <DependentUpon>Frm_NuevaCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Productos.resx">
-      <DependentUpon>Frm_Productos.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Prod.resx">
+      <DependentUpon>Frm_Prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas.resx">
+      <DependentUpon>Frm_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -128,6 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chocolate.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imajen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

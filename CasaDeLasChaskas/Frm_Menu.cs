@@ -19,7 +19,7 @@ namespace CasaDeLasChaskas
 
         private void tsm_productos_Click(object sender, EventArgs e)
         {
-            Frm_Productos abrir = new Frm_Productos();
+            Frm_Prod abrir = new Frm_Prod();
             abrir.Show();
         }
 
@@ -32,6 +32,23 @@ namespace CasaDeLasChaskas
         {
             Frm_Catalogo frm_Catalogo = new Frm_Catalogo();
             frm_Catalogo.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Ventas abrir = new Frm_Ventas();
+            abrir.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            Frm_Prod abrir = new Frm_Prod();
+                abrir.Show();
         }
     }
 }
