@@ -26,7 +26,7 @@ namespace CasaDeLasChaskas
             ControlVentas = new Ventas();
             _Productos = new Entidad_Productos();
             _Ventas = new Entidad_Ventas();
-            TablePanelC.CellContentClick += TablePanelC_CellContentClick;
+            //TablePanelC.CellContentClick += TablePanelC_CellContentClick;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
 
 
@@ -37,7 +37,7 @@ namespace CasaDeLasChaskas
         {
             DateTime fecha = DateTime.Today;//1
             fechaActual = fecha.ToString("yyyy-MM-dd");//1
-            LblFecha.Text = fechaActual;//1
+            //LblFecha.Text = fechaActual;//1
             // Crear las columnas para el carrito
             Carrito.Columns.Add("No_Producto", "No Producto");
             Carrito.Columns.Add("Producto", "Producto");
@@ -97,7 +97,7 @@ namespace CasaDeLasChaskas
 
         public void CrearBotonesCategorias(List<Entidad_Categorias> categorias)
         {
-            PanelBotonesC.Controls.Clear();
+            //PanelBotonesC.Controls.Clear();
             foreach (var categoria in categorias)
             {
                 Button boton = new Button();
@@ -119,7 +119,7 @@ namespace CasaDeLasChaskas
                 // Evento click para mostrar los productos de la categoría
                 boton.Click += (sender, e) => MostrarProductosPorCategoria((int)boton.Tag);
 
-                PanelBotonesC.Controls.Add(boton);
+                //PanelBotonesC.Controls.Add(boton);
             }
         }
 
@@ -140,7 +140,7 @@ namespace CasaDeLasChaskas
             imagenColumna.HeaderText = "Imagen";
             imagenColumna.Name = "Imagen";
             imagenColumna.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            TablePanelC.Columns.Add(imagenColumna);
+            //TablePanelC.Columns.Add(imagenColumna);
 
             // Crear una columna de botones para agregar al carrito
             DataGridViewButtonColumn botonAgregar = new DataGridViewButtonColumn();
@@ -148,7 +148,7 @@ namespace CasaDeLasChaskas
             botonAgregar.Text = "Agregar";
             botonAgregar.Name = "Agregar";
             botonAgregar.UseColumnTextForButtonValue = true;
-            TablePanelC.Columns.Add(botonAgregar);
+            //TablePanelC.Columns.Add(botonAgregar);
 
             // Obtener los productos de la categoría seleccionada
             List<Entidad_Productos> productos = ControlProductos.ObtenerProductos(categoriaId);
@@ -286,7 +286,7 @@ namespace CasaDeLasChaskas
                 {
                     if (A == 0)
                     {
-                        _Ventas.Fecha = LblFecha.Text;
+                        //_Ventas.Fecha = LblFecha.Text;
                         _Ventas.Cliente = TxtCliente.Text;
                     }
                     _Ventas.PRODUCTO = int.Parse(Carrito.Rows[A].Cells[0].Value.ToString());

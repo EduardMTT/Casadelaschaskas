@@ -120,7 +120,9 @@ namespace CasaDeLasChaskas
 
         private void BtnAgregarCategoria_Click(object sender, EventArgs e)
         {
+            Frm_NuevaCategoria frm_agregarcategotia = new Frm_NuevaCategoria();
 
+            frm_agregarcategotia.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

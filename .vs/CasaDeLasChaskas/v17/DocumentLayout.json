@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|c:\\users\\rafav\\onedrive\\escritorio\\proyect\\casadelaschaskas\\casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_actualizarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_nuevacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_catalogo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_catalogo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frmagregarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frmagregarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,7 +55,7 @@
       "RelativeMoniker": "D:0:0:{7429631A-8A29-432A-9FB9-5E0389DD4A98}|Conexion\\Conexion.csproj|solutionrelative:conexion\\enlaceproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|c:\\users\\rafav\\onedrive\\escritorio\\proyect\\casadelaschaskas\\controlador\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\controlador\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{747BB736-BF57-4A64-8E16-CAF3C920D6FC}|Controlador\\Controlador.csproj|solutionrelative:controlador\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -41,14 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{76D7A9A7-0DC5-4588-9BC7-6D8B0F97BD9C}|Entidades\\Entidades.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\entidades\\entidad_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76D7A9A7-0DC5-4588-9BC7-6D8B0F97BD9C}|Entidades\\Entidades.csproj|solutionrelative:entidades\\entidad_productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6A6F8EEA-F67E-42F8-8537-B336E6CA6EA5}|CasaDeLasChaskas\\CasaDeLasChaskas.csproj|solutionrelative:casadelaschaskas\\frm_prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,6 +95,86 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Frm_ActualizarCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "RelativeToolTip": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwCcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:57:05.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_ActualizarCategoria.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_ActualizarCategoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:57:04.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_NuevaCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "RelativeToolTip": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAArwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:53:23.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_NuevaCategoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_NuevaCategoria.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_NuevaCategoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:53:22.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Frm_Ventas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Ventas.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Ventas.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Ventas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Ventas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:51:52.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Frm_Menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Menu.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Menu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:50:34.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Frm_Catalogo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Catalogo.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:49:43.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FrmAgregarProductos.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\FrmAgregarProductos.cs",
               "RelativeDocumentMoniker": "CasaDeLasChaskas\\FrmAgregarProductos.cs",
@@ -70,12 +182,11 @@
               "RelativeToolTip": "CasaDeLasChaskas\\FrmAgregarProductos.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAcwDAAAACPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T00:49:07.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T00:49:07.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "EnlaceVentas.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Conexion\\EnlaceVentas.cs",
               "RelativeDocumentMoniker": "Conexion\\EnlaceVentas.cs",
@@ -83,12 +194,46 @@
               "RelativeToolTip": "Conexion\\EnlaceVentas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T00:43:46.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T00:43:46.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "Frm_Prod.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Prod.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\Proyect - Copy\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:40:59.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Frm_Prod.cs",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Prod.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs",
+              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Prod.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAIAxwHwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:41:01.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Frm_Catalogo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.Designer.cs",
+              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Catalogo.Designer.cs",
+              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Catalogo.Designer.cs",
+              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Catalogo.Designer.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAEwPkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T21:49:45.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "EnlaceProductos.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Conexion\\EnlaceProductos.cs",
               "RelativeDocumentMoniker": "Conexion\\EnlaceProductos.cs",
@@ -96,12 +241,11 @@
               "RelativeToolTip": "Conexion\\EnlaceProductos.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T00:37:11.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T00:37:11.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "EnlaceCategorias.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Conexion\\EnlaceCategorias.cs",
               "RelativeDocumentMoniker": "Conexion\\EnlaceCategorias.cs",
@@ -113,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Productos.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Controlador\\Productos.cs",
               "RelativeDocumentMoniker": "Controlador\\Productos.cs",
@@ -121,24 +265,22 @@
               "RelativeToolTip": "Controlador\\Productos.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAcwBwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:56:09.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T04:56:09.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "FrmAgregarProductos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\FrmAgregarProductos.cs",
               "RelativeDocumentMoniker": "CasaDeLasChaskas\\FrmAgregarProductos.cs",
               "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\FrmAgregarProductos.cs [Dise\u00F1o]",
               "RelativeToolTip": "CasaDeLasChaskas\\FrmAgregarProductos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T00:45:38.581Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-24T00:45:38.581Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Categorias.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Controlador\\Categorias.cs",
               "RelativeDocumentMoniker": "Controlador\\Categorias.cs",
@@ -150,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Program.cs",
               "RelativeDocumentMoniker": "CasaDeLasChaskas\\Program.cs",
@@ -162,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "Enlace.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Conexion\\Enlace.cs",
               "RelativeDocumentMoniker": "Conexion\\Enlace.cs",
@@ -174,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "Entidad_Productos.cs",
               "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\Entidades\\Entidad_Productos.cs",
               "RelativeDocumentMoniker": "Entidades\\Entidad_Productos.cs",
@@ -183,29 +325,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T04:56:29.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Frm_Prod.cs",
-              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Prod.cs",
-              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Prod.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAAAIAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:41:01.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Frm_Prod.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs",
-              "RelativeDocumentMoniker": "CasaDeLasChaskas\\Frm_Prod.cs",
-              "ToolTip": "C:\\Users\\rafav\\OneDrive\\Escritorio\\Proyect\\Casadelaschaskas\\CasaDeLasChaskas\\Frm_Prod.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CasaDeLasChaskas\\Frm_Prod.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:40:59.267Z"
             }
           ]
         }
