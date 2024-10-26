@@ -42,17 +42,31 @@ namespace CasaDeLasChaskas
         {
             try
             {
+                // Obtener los valores de los controles
+                string nombreProducto = txtnombredelproducto.Text.ToString();
+                string tamaño = txttamaño.Text.ToString();
+                decimal costo = decimal.Parse(txtcosto.Text.ToString());
+                string imagenRuta = TxtRuta.Text.Replace("¥", "\\"); // Reemplazar separadores de ruta incorrectos
+                string estatus = lblEstado.Text.ToString();
+                int categoriaId = int.Parse(txtcategoria.Text.ToString());
 
-                //ESTA PARTE DEL CODIGO ES HORRIBLE PERO SOLO ASI FUNCIONABA JAJA
-                ControlProductos.AgregarProducto(txtnombredelproducto.Text.ToString(), txttamaño.Text.ToString(), decimal.Parse(txtcosto.Text.ToString()),
-                    lblEstado.Text.ToString(),TxtRuta.Text.Replace("¥", "\\"), int.Parse(txtcategoria.Text.ToString()));
-                MessageBox.Show("Se guardo el producto correctamente!", "Operacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Llamar al método de agregar producto
+                ControlProductos.AgregarProducto(nombreProducto, tamaño, costo, imagenRuta, estatus, categoriaId);
+
+                MessageBox.Show("¡Producto guardado correctamente!", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error al guardar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Close(); // Cerrar el formulario actual
+                Frm_Prod frm_Prod = new Frm_Prod(); // Abrir el formulario de productos
+                frm_Prod.Show();
             }
         }
+
         private void cbactivo_CheckedChanged(object sender, EventArgs e)
         {
             if (cbactivo.Checked)

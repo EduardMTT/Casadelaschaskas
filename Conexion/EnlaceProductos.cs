@@ -15,7 +15,7 @@ namespace Conexion
         Enlace Conectar;
         public EnlaceProductos()
         {
-            Conectar = new Enlace("localhost","root", "Casa_de_las_Chaskas_1", 3306);
+            Conectar = new Enlace("localhost","root", "Casa_de_las_Chaskas", 3306);
         }
         public List<Entidad_Productos> ObtenerProductos(int No_Categoria)
         {

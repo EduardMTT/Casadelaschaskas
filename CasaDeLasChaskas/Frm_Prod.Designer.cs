@@ -97,6 +97,7 @@
             this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.TablePanel.Size = new System.Drawing.Size(671, 416);
             this.TablePanel.TabIndex = 5;
+            this.TablePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TablePanel_Paint);
             // 
             // panel1
             // 
@@ -146,6 +147,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_Prod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Frm_Prod_Load);
             this.PanelCategorias.ResumeLayout(false);

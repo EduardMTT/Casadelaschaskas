@@ -130,5 +130,10 @@ namespace CasaDeLasChaskas
             FrmAgregarProductos frmAgregarProductos = new FrmAgregarProductos();
             frmAgregarProductos.Show();
         }
+
+        private void TablePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

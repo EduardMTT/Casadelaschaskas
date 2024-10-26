@@ -22,7 +22,7 @@ namespace Entidades
         public decimal Precio { get => _Precio; set => _Precio = value; }
         public int FKNo_Categoria { get => _FKNo_Categoria; set => _FKNo_Categoria = value; }
         public string Imagen { get => _Imagen; set => _Imagen = value; }
-        public string Estatus { get => _Imagen; set => _Imagen = value; }
+        public string Estatus { get => _Estatus; set => _Estatus = value; }
         public string Categoria { get => _Categoria; set => _Categoria = value; }
     }
 }

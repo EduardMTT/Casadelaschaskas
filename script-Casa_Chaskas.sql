@@ -1,20 +1,22 @@
-DROP DATABASE Casa_de_las_Chaskas_1;
-CREATE DATABASE Casa_de_las_Chaskas_1;
-USE Casa_de_las_Chaskas_1;
+DROP DATABASE Casa_de_las_Chaskas;
+CREATE DATABASE Casa_de_las_Chaskas;
+USE Casa_de_las_Chaskas;
 
 CREATE TABLE Categoria(
-	No_Categoria INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	No_Categoria INT AUTO_INCREMENT PRIMARY KEY,
 	Nombre VARCHAR(50) NOT NULL);
 	
-CREATE TABLE Productos(
-	No_Producto INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-	Producto VARCHAR(50) NOT NULL,
-	Tamaño VARCHAR(50) NOT NULL,
-	Precio DECIMAL NOT NULL,
-	Imagen TEXT NOT NULL,
-	Estatus VARCHAR(50),
-	FKNo_Categoria INT NOT NULL,
-	FOREIGN KEY(FKNo_Categoria) REFERENCES Categoria(No_Categoria));
+CREATE TABLE Productos (
+    No_Producto INT AUTO_INCREMENT PRIMARY KEY,
+    Producto VARCHAR(50),
+    Tamaño VARCHAR(50),
+    Precio DECIMAL(10,2),
+    Imagen TEXT,
+    Estatus VARCHAR(50),
+    FKNo_Categoria INT,
+    FOREIGN KEY(FKNo_Categoria) REFERENCES Categoria(No_Categoria)
+);
+
 	
 CREATE TABLE Venta(
 	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
