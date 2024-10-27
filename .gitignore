@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CasaDeLasChaskas/FileContentIndex/0239eb3b-ed2c-4e2d-93c0-3ce90050fe05.vsidx
+*.vsidx
