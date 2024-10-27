@@ -15,6 +15,10 @@ namespace Controlador
         {
             enlace = new EnlaceCategorias();
         }
+        public int ObtenerCategoriaN(string Nombre)
+        { 
+            return enlace.ObtenerCategoriaN(Nombre);
+        }
         public void ActualizarCategoria(int ID, string Nombre)
         {
             enlace.ActualizarCategoria(ID,Nombre);

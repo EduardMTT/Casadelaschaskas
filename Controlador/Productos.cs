@@ -12,6 +12,10 @@ namespace Controlador
     public class Productos
     {
         EnlaceProductos enlace;
+        public void ActualizarProductoE(int ID, string Estatus)
+        {
+            enlace.ActualizarProductoE(ID,Estatus);
+        }
         public Productos()
         { 
             enlace= new EnlaceProductos();

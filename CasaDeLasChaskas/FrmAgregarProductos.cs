@@ -48,22 +48,24 @@ namespace CasaDeLasChaskas
                 decimal costo = decimal.Parse(txtcosto.Text.ToString());
                 string imagenRuta = TxtRuta.Text.Replace("¥", "\\"); // Reemplazar separadores de ruta incorrectos
                 string estatus = lblEstado.Text.ToString();
-                int categoriaId = int.Parse(txtcategoria.Text.ToString());
+                int categoriaId = ControlCategorias.ObtenerCategoriaN(CBCategoria.Text);
+                if (categoriaId == 0)
+                {
+                    MessageBox.Show("Error la categoria ingresada no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    ControlProductos.AgregarProducto(nombreProducto, tamaño, costo, imagenRuta, estatus, categoriaId);
+                    MessageBox.Show("¡Producto guardado correctamente!", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    Frm_Prod abrir = new Frm_Prod();
+                    abrir.Show();
+                }
 
-                // Llamar al método de agregar producto
-                ControlProductos.AgregarProducto(nombreProducto, tamaño, costo, imagenRuta, estatus, categoriaId);
-
-                MessageBox.Show("¡Producto guardado correctamente!", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al guardar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                this.Close(); // Cerrar el formulario actual
-                Frm_Prod frm_Prod = new Frm_Prod(); // Abrir el formulario de productos
-                frm_Prod.Show();
             }
         }
 
@@ -92,9 +94,20 @@ namespace CasaDeLasChaskas
                 lblEstado.Text = ""; // Limpiar el TextBox si ninguno está seleccionado
             }
         }
+        public void CargarCOMBOBOX(List<Entidad_Categorias> categorias)
+        {
+            foreach(var categoria in categorias)
+            {
+                CBCategoria.Items.Add(categoria.Nombre);
+            }
+        }
         private void FrmAgregarProductos_Load(object sender, EventArgs e)
         {
-
+            CargarCOMBOBOX(ControlCategorias.ObtenerCategorias());
+            Color colorOriginal = Color.FromArgb(68, 42, 4);
+            int alpha = (int)(255 * 0.69);
+            Color colorDesvanecido = Color.FromArgb(alpha, colorOriginal.R, colorOriginal.G, colorOriginal.B);
+            panel1.BackColor = colorDesvanecido;
         }
 
         private void btnagregarImagen_Click(object sender, EventArgs e)
@@ -118,10 +131,11 @@ namespace CasaDeLasChaskas
                     string rutaCorrecta = TxtRuta.Text.Replace(@"¥", @"\");
                     rutaCorrecta = rutaCorrecta.Replace(@"\", @"\\");
                     TxtRuta.Text = rutaCorrecta;
+                    btnagregarImagen.Visible = false;
+                    Imagen.BackgroundImage = new Bitmap(TxtRuta.Text);
+                    Imagen.BackColor = Color.Transparent;
+                    Imagen.BackgroundImageLayout = ImageLayout.Stretch;
                 }
-
-                Imagen.BackgroundImage = new Bitmap(TxtRuta.Text);
-                Imagen.BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
 
@@ -149,6 +163,44 @@ namespace CasaDeLasChaskas
             {
                 lblEstado.Text = ""; // Limpiar el TextBox si ninguno está seleccionado
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttamaño_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcosto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se cancelo la operacion", "Operación Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Frm_Prod abrir = new Frm_Prod();
+            abrir.Show();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

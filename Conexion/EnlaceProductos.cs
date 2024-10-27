@@ -86,5 +86,10 @@ namespace Conexion
             Conectar.EjecutarConsulta(Comando);
 
         }
+        public void ActualizarProductoE(int ID,string Estatus)
+        {
+            string Comando = string.Format("UPDATE productos SET Estatus='{0}' WHERE No_Producto={1}",Estatus,ID);
+            Conectar.EjecutarConsulta(Comando);
+        }
     }
 }

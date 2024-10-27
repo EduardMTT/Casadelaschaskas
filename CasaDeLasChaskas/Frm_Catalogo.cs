@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-//referencia para hacer la imprecion
 using System.Drawing.Printing;
 using System.Collections;
 
@@ -26,13 +25,55 @@ namespace CasaDeLasChaskas
             ControlVentas = new Ventas();
             _Productos = new Entidad_Productos();
             _Ventas = new Entidad_Ventas();
-            //TablePanelC.CellContentClick += TablePanelC_CellContentClick;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-
-
         }
         string fechaActual;
+        private void BuscarProductos(object sender, EventArgs e, int Categoria, string Nombre)
+        {
+            TablePanel.Controls.Clear();
+            try
+            {
+                CrearBotonesProductos(ControlProductos.ObtenerProductos(Categoria));
 
+            }
+            catch
+            {
+                TablePanel.Controls.Clear();
+                MessageBox.Show("Esta categoria no tiene ningun producto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public void CrearBotonesProductos(List<Entidad_Productos> productos)
+        {
+            TablePanel.Controls.Clear();
+            foreach (var producto in productos)
+            {
+                if (producto.Estatus.Equals("Activo"))
+                {
+                    Button boton = new Button();
+                    string ruta = producto.Imagen;
+                    boton.BackgroundImage = System.Drawing.Image.FromFile(ruta);
+                    boton.BackgroundImageLayout = ImageLayout.Stretch;
+                    boton.BackColor = Color.White;
+                    boton.Font = new Font(boton.Font.FontFamily, 9);
+                    boton.Tag = producto.No_Producto;
+                    boton.Size = new Size(140, 140);
+                    TablePanel.Controls.Add(boton);
+                }
+            }
+        }
+        public void CrearBotonesCategorias(List<Entidad_Categorias> categorias)
+        {
+            TablePanel.Controls.Clear();
+            foreach (var categoria in categorias)
+            {
+                Button boton = new Button();
+                boton.Text = categoria.Nombre;
+                boton.Font = new Font("Yu Gothic", 13);
+                boton.Tag = categoria.No_Categoria;
+                boton.Size = new Size(140, 30);
+                boton.Click += (sender, e) => BuscarProductos(sender, e, categoria.No_Categoria, categoria.Nombre);
+                TablePanel.Controls.Add(boton);
+            }
+        }
         private void Frm_Catalogo_Load(object sender, EventArgs e)
         {
             DateTime fecha = DateTime.Today;//1
@@ -68,134 +109,10 @@ namespace CasaDeLasChaskas
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseColumnTextForButtonValue = true;
             Carrito.Columns.Add(btnEliminar);
-
-            // Llenar las categorías
             CrearBotonesCategorias(ControlCategorias.ObtenerCategorias());
         }
 
-        public void OpcionEliminar_Click(object sender, EventArgs e, int Categoria, string Nombre)
-        {
-            if (MessageBox.Show("¿Esta seguro de eliminar la categoria: " + Nombre + "?\n" +
-                "Al realizar esta operacion se eliminaran tambien los productos que conformen esta categoria.", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                ControlCategorias.EliminarCategoria(Categoria);
-                MessageBox.Show("Categoria Eliminada!", "Operacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CrearBotonesCategorias(ControlCategorias.ObtenerCategorias());
-            }
-            else
-            {
-                MessageBox.Show("Se cancelo la operacion", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        public void OpcionActualizar_Click(object sender, EventArgs e, int Categoria, string Nombre)
-        {
-            Frm_ActualizarCategoria abrir = new Frm_ActualizarCategoria(Categoria, Nombre);
-            abrir.Show();
-            this.Close();
-        }
-
-        public void CrearBotonesCategorias(List<Entidad_Categorias> categorias)
-        {
-            //PanelBotonesC.Controls.Clear();
-            foreach (var categoria in categorias)
-            {
-                Button boton = new Button();
-                ContextMenuStrip Opciones = new ContextMenuStrip();
-                ToolStripMenuItem opcionEliminar = new ToolStripMenuItem("Eliminar");
-                ToolStripMenuItem opcionActualizar = new ToolStripMenuItem("Actualizar");
-
-                opcionEliminar.Click += (sender, e) => OpcionEliminar_Click(sender, e, categoria.No_Categoria, categoria.Nombre);
-                opcionActualizar.Click += (sender, e) => OpcionActualizar_Click(sender, e, categoria.No_Categoria, categoria.Nombre);
-
-                Opciones.Items.Add(opcionEliminar);
-                Opciones.Items.Add(opcionActualizar);
-
-                boton.Text = categoria.Nombre;
-                boton.Tag = categoria.No_Categoria;
-                boton.Size = new Size(140, 30);
-                boton.ContextMenuStrip = Opciones;
-
-                // Evento click para mostrar los productos de la categoría
-                boton.Click += (sender, e) => MostrarProductosPorCategoria((int)boton.Tag);
-
-                //PanelBotonesC.Controls.Add(boton);
-            }
-        }
-
-        private void MostrarProductosPorCategoria(int categoriaId)
-        {
-            // Limpiar el DataGridView antes de cargar nuevos datos
-            TablePanelC.Columns.Clear();
-            TablePanelC.Rows.Clear();
-
-            // Agregar columnas para las propiedades
-            TablePanelC.Columns.Add("No_Producto", "No Producto");
-            TablePanelC.Columns.Add("Producto", "Producto");
-            TablePanelC.Columns.Add("Tamaño", "Tamaño");
-            TablePanelC.Columns.Add("Precio", "Precio");
-
-            // Crear una columna de imagen
-            DataGridViewImageColumn imagenColumna = new DataGridViewImageColumn();
-            imagenColumna.HeaderText = "Imagen";
-            imagenColumna.Name = "Imagen";
-            imagenColumna.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            //TablePanelC.Columns.Add(imagenColumna);
-
-            // Crear una columna de botones para agregar al carrito
-            DataGridViewButtonColumn botonAgregar = new DataGridViewButtonColumn();
-            botonAgregar.HeaderText = "Agregar al Carrito";
-            botonAgregar.Text = "Agregar";
-            botonAgregar.Name = "Agregar";
-            botonAgregar.UseColumnTextForButtonValue = true;
-            //TablePanelC.Columns.Add(botonAgregar);
-
-            // Obtener los productos de la categoría seleccionada
-            List<Entidad_Productos> productos = ControlProductos.ObtenerProductos(categoriaId);
-
-            // Llenar el DataGridView con los productos
-            foreach (var producto in productos)
-            {
-                // Cargar la imagen desde la ruta guardada en la base de datos
-                Image imagenProducto = null;
-                if (File.Exists(producto.Imagen))
-                {
-                    imagenProducto = Image.FromFile(producto.Imagen);
-                }
-
-                // Agregar una fila con los datos y la imagen
-                TablePanelC.Rows.Add(producto.No_Producto, producto.Producto, producto.Tamaño, producto.Precio, imagenProducto);
-            }
-
-            // Ajustar el tamaño de las columnas si es necesario
-            TablePanelC.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-        }
-
-
-        private void TablePanelC_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                // Verificar si el clic fue en el botón de agregar
-                if (TablePanelC.Columns[e.ColumnIndex].Name == "Agregar")
-                {
-                    // Obtener los valores de la fila seleccionada
-                    int noProducto = Convert.ToInt32(TablePanelC.Rows[e.RowIndex].Cells["No_Producto"].Value);
-                    string producto = TablePanelC.Rows[e.RowIndex].Cells["Producto"].Value.ToString();
-                    string tamaño = TablePanelC.Rows[e.RowIndex].Cells["Tamaño"].Value.ToString();
-                    decimal precio = Convert.ToDecimal(TablePanelC.Rows[e.RowIndex].Cells["Precio"].Value);
-
-                    // Agregar el producto al carrito con cantidad 1
-                    Carrito.Rows.Add(noProducto, producto, tamaño, precio, 1);
-
-                    // Recalcular el total
-                    CalcularTotal();
-                }
-            }
-        }
-
-
-
+       
 
         private void CalcularTotal()
         {
@@ -412,6 +329,11 @@ namespace CasaDeLasChaskas
             txt_total.Text = string.Empty;
             TxtPaga.Text = string.Empty;
             TxtCambio.Text = string.Empty;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CrearBotonesCategorias(ControlCategorias.ObtenerCategorias());
         }
     }
 }

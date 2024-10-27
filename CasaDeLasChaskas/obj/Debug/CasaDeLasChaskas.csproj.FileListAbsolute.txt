@@ -85,7 +85,6 @@ C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasCh
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.csproj.SuggestedBindingRedirects.cache
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.exe.config
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.Frm_Menu.resources
-C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.Frm_Productos.resources
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.Properties.Resources.resources
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.csproj.GenerateResource.cache
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.csproj.CoreCompileInputs.cache
@@ -301,3 +300,4 @@ C:\Users\rafav\OneDrive\Escritorio\Proyect - Copy\Casadelaschaskas\CasaDeLasChas
 C:\Users\rafav\OneDrive\Escritorio\Proyect - Copy\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLa.46EE7DBE.Up2Date
 C:\Users\rafav\OneDrive\Escritorio\Proyect - Copy\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.exe
 C:\Users\rafav\OneDrive\Escritorio\Proyect - Copy\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.pdb
+C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\CasaDeLasChaskas\obj\Debug\CasaDeLasChaskas.FrmAgregarProductos.resources
