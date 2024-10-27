@@ -202,5 +202,10 @@ namespace CasaDeLasChaskas
         {
 
         }
+
+        private void Imagen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

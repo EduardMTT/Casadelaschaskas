@@ -37,11 +37,12 @@
             // BtnGuardar
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.Violet;
-            this.BtnGuardar.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.BtnGuardar.Location = new System.Drawing.Point(217, 92);
+            this.BtnGuardar.Location = new System.Drawing.Point(193, 74);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(98, 35);
+            this.BtnGuardar.Size = new System.Drawing.Size(87, 28);
             this.BtnGuardar.TabIndex = 0;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -53,31 +54,33 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(42)))), ((int)(((byte)(4)))));
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(-6, -1);
+            this.label1.Location = new System.Drawing.Point(-5, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(525, 30);
+            this.label1.Size = new System.Drawing.Size(453, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "¿Como se llamara tu nueva categoria de productos?";
             // 
             // TxtNombreC
             // 
-            this.TxtNombreC.Location = new System.Drawing.Point(118, 51);
+            this.TxtNombreC.Location = new System.Drawing.Point(105, 41);
+            this.TxtNombreC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombreC.Name = "TxtNombreC";
-            this.TxtNombreC.Size = new System.Drawing.Size(280, 26);
+            this.TxtNombreC.Size = new System.Drawing.Size(249, 22);
             this.TxtNombreC.TabIndex = 2;
             // 
             // Frm_NuevaCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.Fondo;
-            this.ClientSize = new System.Drawing.Size(534, 165);
+            this.ClientSize = new System.Drawing.Size(475, 132);
             this.Controls.Add(this.TxtNombreC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnGuardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_NuevaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Categoria";

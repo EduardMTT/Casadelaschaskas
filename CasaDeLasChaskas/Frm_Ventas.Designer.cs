@@ -51,11 +51,11 @@
             // DT1
             // 
             this.DT1.CalendarMonthBackground = System.Drawing.Color.Cornsilk;
-            this.DT1.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DT1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DT1.Location = new System.Drawing.Point(11, 10);
             this.DT1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DT1.Name = "DT1";
-            this.DT1.Size = new System.Drawing.Size(366, 30);
+            this.DT1.Size = new System.Drawing.Size(366, 28);
             this.DT1.TabIndex = 2;
             this.DT1.ValueChanged += new System.EventHandler(this.DT1_ValueChanged);
             // 
@@ -64,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(811, 13);
+            this.label1.Location = new System.Drawing.Point(804, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 23);
             this.label1.TabIndex = 3;
@@ -75,7 +75,7 @@
             this.LblTotal.AutoSize = true;
             this.LblTotal.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTotal.ForeColor = System.Drawing.Color.White;
-            this.LblTotal.Location = new System.Drawing.Point(980, 13);
+            this.LblTotal.Location = new System.Drawing.Point(974, 12);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(21, 23);
             this.LblTotal.TabIndex = 4;
