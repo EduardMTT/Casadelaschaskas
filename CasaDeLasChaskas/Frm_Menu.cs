@@ -47,7 +47,7 @@ namespace CasaDeLasChaskas
 
         private void BtnProductos_Click(object sender, EventArgs e)
         {
-            Frm_Productos abrir = new Frm_Productos();
+            FrmAgregarProductos abrir = new FrmAgregarProductos();
                 abrir.Show();
         }
     }

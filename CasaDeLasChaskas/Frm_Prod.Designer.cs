@@ -48,8 +48,10 @@
             this.PanelCategorias.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelCategorias.ForeColor = System.Drawing.SystemColors.Window;
             this.PanelCategorias.Location = new System.Drawing.Point(0, 0);
+            this.PanelCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelCategorias.Name = "PanelCategorias";
-            this.PanelCategorias.Size = new System.Drawing.Size(294, 663);
+            this.PanelCategorias.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelCategorias.Size = new System.Drawing.Size(294, 662);
             this.PanelCategorias.TabIndex = 4;
             this.PanelCategorias.TabStop = false;
             this.PanelCategorias.Text = "Categorias";
@@ -58,6 +60,7 @@
             // 
             this.PanelBotonesC.AutoScroll = true;
             this.PanelBotonesC.Location = new System.Drawing.Point(4, 46);
+            this.PanelBotonesC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelBotonesC.Name = "PanelBotonesC";
             this.PanelBotonesC.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.PanelBotonesC.Size = new System.Drawing.Size(282, 540);
@@ -68,8 +71,9 @@
             this.BtnAgregarCategoria.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarCategoria.ForeColor = System.Drawing.Color.Indigo;
             this.BtnAgregarCategoria.Location = new System.Drawing.Point(6, 595);
+            this.BtnAgregarCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAgregarCategoria.Name = "BtnAgregarCategoria";
-            this.BtnAgregarCategoria.Size = new System.Drawing.Size(282, 43);
+            this.BtnAgregarCategoria.Size = new System.Drawing.Size(282, 42);
             this.BtnAgregarCategoria.TabIndex = 1;
             this.BtnAgregarCategoria.Text = "Nueva Categoria";
             this.BtnAgregarCategoria.UseVisualStyleBackColor = true;
@@ -84,6 +88,7 @@
             this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.TablePanel.Location = new System.Drawing.Point(28, 36);
+            this.TablePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TablePanel.Name = "TablePanel";
             this.TablePanel.RowCount = 4;
             this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -92,6 +97,7 @@
             this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.TablePanel.Size = new System.Drawing.Size(755, 520);
             this.TablePanel.TabIndex = 5;
+            this.TablePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TablePanel_Paint);
             // 
             // panel1
             // 
@@ -100,6 +106,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.TablePanel);
             this.panel1.Location = new System.Drawing.Point(323, 60);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(896, 590);
             this.panel1.TabIndex = 6;
@@ -108,11 +115,13 @@
             // 
             this.button1.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.Agregar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(825, 3);
+            this.button1.Location = new System.Drawing.Point(825, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 58);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -136,7 +145,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_Prod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Frm_Prod_Load);
             this.PanelCategorias.ResumeLayout(false);

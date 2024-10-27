@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -71,7 +72,11 @@ namespace CasaDeLasChaskas
                 Button boton = new Button();
                 ContextMenuStrip Opciones = new ContextMenuStrip();
                 ToolStripMenuItem opcionEliminar = new ToolStripMenuItem("Eliminar");
+                ToolStripMenuItem opcionActivar = new ToolStripMenuItem("Activar");
+                ToolStripMenuItem opcionDesactivar = new ToolStripMenuItem("Desactivar");
                 opcionEliminar.Click += (sender, e) => OpcionEliminar_ClickProdu(sender, e, producto.No_Producto, producto.Producto);
+                opcionActivar.Click += (sender, e) => OpcionActivar(sender,e,producto.No_Producto,producto.Producto,"Activo",boton);
+                opcionDesactivar.Click += (sender, e) => OpcionActivar(sender, e, producto.No_Producto, producto.Producto, "Inactivo", boton);
                 Opciones.Items.Add(opcionEliminar);
                 string ruta = producto.Imagen;
                 boton.BackgroundImage = System.Drawing.Image.FromFile(ruta);
@@ -80,8 +85,31 @@ namespace CasaDeLasChaskas
                 boton.Font = new Font(boton.Font.FontFamily,9);
                 boton.Tag = producto.No_Producto;
                 boton.Size = new Size(140, 140);
+                if(producto.Estatus.Equals("Inactivo"))
+                {
+                    boton.BackColor = Color.FromArgb(249, 154, 154);
+                    Opciones.Items.Add(opcionActivar);
+                }
+                else
+                {
+                    boton.BackColor = Color.FromArgb(223, 249, 154);
+                    Opciones.Items.Add(opcionDesactivar);
+                }
                 boton.ContextMenuStrip = Opciones;
                 TablePanel.Controls.Add(boton);
+            }
+        }
+        public void OpcionActivar(object sender, EventArgs e, int IDProducto, string Nombre, string Estatus, Button boton)
+        {
+            ControlProductos.ActualizarProductoE(IDProducto,Estatus);
+            MessageBox.Show("Se "+Estatus+" el producto "+Nombre+" exitosamente","Operacion Exitosa",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (Estatus=="Inactivo")
+            {
+                boton.BackColor = Color.FromArgb(249, 154, 154);
+            }
+            else
+            {
+                boton.BackColor = Color.FromArgb(223, 249, 154);
             }
         }
         public void OpcionEliminar_ClickProdu(object sender, EventArgs e, int IDProducto, string Nombre)
@@ -119,6 +147,20 @@ namespace CasaDeLasChaskas
         }
 
         private void BtnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            Frm_NuevaCategoria frm_agregarcategotia = new Frm_NuevaCategoria();
+
+            frm_agregarcategotia.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAgregarProductos frmAgregarProductos = new FrmAgregarProductos();
+            frmAgregarProductos.ShowDialog();
+            this.Close();
+        }
+
+        private void TablePanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

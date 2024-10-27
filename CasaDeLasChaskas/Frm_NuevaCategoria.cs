@@ -25,8 +25,9 @@ namespace CasaDeLasChaskas
             ControlCategorias.GuardarCategoria(TxtNombreC.Text);
             MessageBox.Show(TxtNombreC.Text+" Se a guardado exitosamente");
             this.Close();
-            Frm_Productos abrir = new Frm_Productos();
-            abrir.Show();
+
+            Frm_Prod rfmm = new Frm_Prod();
+            rfmm.Show();
         }
 
         private void Frm_NuevaCategoria_Load(object sender, EventArgs e)

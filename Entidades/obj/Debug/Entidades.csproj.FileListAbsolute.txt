@@ -10,3 +10,9 @@ C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\Entidades\o
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\Entidades\obj\Debug\Entidades.dll
 C:\Users\eduar\Desktop\Proyecto Casa de las Chaskas\Casadelaschaskas\Entidades\obj\Debug\Entidades.pdb
+C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\bin\Debug\Entidades.dll
+C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\bin\Debug\Entidades.pdb
+C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.dll
+C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.pdb

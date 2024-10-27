@@ -12,6 +12,10 @@ namespace Controlador
     public class Productos
     {
         EnlaceProductos enlace;
+        public void ActualizarProductoE(int ID, string Estatus)
+        {
+            enlace.ActualizarProductoE(ID,Estatus);
+        }
         public Productos()
         { 
             enlace= new EnlaceProductos();
@@ -24,9 +28,9 @@ namespace Controlador
         {
             enlace.ActualizarProducto(entidad);
         }
-        public void AgregarProducto(string P, string T, decimal Pre, string I, int C)
+        public void AgregarProducto(string P, string T, decimal Pre, string I,string Es, int C)
         {
-            enlace.GuardarProducto(P,T,Pre,I,C);
+            enlace.GuardarProducto(P,T,Pre,I,Es,C);
         }
         public void EliminarProducto(int ID)
         {
