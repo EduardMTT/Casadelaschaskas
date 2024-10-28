@@ -16,3 +16,9 @@ C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\
 C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.dll
 C:\Users\rafav\OneDrive\Escritorio\Proyect\Casadelaschaskas\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Celeste\Desktop\Casadelaschaskas\Entidades\bin\Debug\Entidades.dll
+C:\Users\Celeste\Desktop\Casadelaschaskas\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Celeste\Desktop\Casadelaschaskas\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Celeste\Desktop\Casadelaschaskas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Celeste\Desktop\Casadelaschaskas\Entidades\obj\Debug\Entidades.dll
+C:\Users\Celeste\Desktop\Casadelaschaskas\Entidades\obj\Debug\Entidades.pdb

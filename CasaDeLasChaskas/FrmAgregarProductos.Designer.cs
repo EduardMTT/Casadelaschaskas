@@ -66,11 +66,11 @@
             // lbl_titulo
             // 
             this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(107, 14);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(365, 54);
+            this.lbl_titulo.Size = new System.Drawing.Size(389, 49);
             this.lbl_titulo.TabIndex = 0;
             this.lbl_titulo.Text = "Agregar productos";
             // 
@@ -104,8 +104,9 @@
             // 
             this.CBCategoria.FormattingEnabled = true;
             this.CBCategoria.Location = new System.Drawing.Point(24, 55);
+            this.CBCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CBCategoria.Name = "CBCategoria";
-            this.CBCategoria.Size = new System.Drawing.Size(279, 29);
+            this.CBCategoria.Size = new System.Drawing.Size(408, 29);
             this.CBCategoria.TabIndex = 14;
             // 
             // lblEstado
@@ -114,7 +115,7 @@
             this.lblEstado.BackColor = System.Drawing.Color.Transparent;
             this.lblEstado.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(335, 443);
+            this.lblEstado.Location = new System.Drawing.Point(335, 442);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(44, 32);
             this.lblEstado.TabIndex = 13;
@@ -135,10 +136,10 @@
             this.btnagregarImagen.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.Agregar;
             this.btnagregarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregarImagen.Location = new System.Drawing.Point(115, 401);
+            this.btnagregarImagen.Location = new System.Drawing.Point(117, 398);
             this.btnagregarImagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnagregarImagen.Name = "btnagregarImagen";
-            this.btnagregarImagen.Size = new System.Drawing.Size(59, 50);
+            this.btnagregarImagen.Size = new System.Drawing.Size(53, 60);
             this.btnagregarImagen.TabIndex = 12;
             this.btnagregarImagen.UseVisualStyleBackColor = false;
             this.btnagregarImagen.Click += new System.EventHandler(this.btnagregarImagen_Click);
@@ -147,11 +148,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(102, 495);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 28);
+            this.label5.Size = new System.Drawing.Size(91, 24);
             this.label5.TabIndex = 11;
             this.label5.Text = "Imagen";
             // 
@@ -159,26 +160,27 @@
             // 
             this.Imagen.BackColor = System.Drawing.Color.SaddleBrown;
             this.Imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Imagen.Location = new System.Drawing.Point(59, 361);
+            this.Imagen.Location = new System.Drawing.Point(57, 358);
             this.Imagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Imagen.Name = "Imagen";
             this.Imagen.Size = new System.Drawing.Size(172, 134);
             this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Imagen.TabIndex = 10;
             this.Imagen.TabStop = false;
+            this.Imagen.Click += new System.EventHandler(this.Imagen_Click);
             // 
             // cbinactivo
             // 
             this.cbinactivo.AutoSize = true;
             this.cbinactivo.BackColor = System.Drawing.Color.Transparent;
             this.cbinactivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbinactivo.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbinactivo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbinactivo.ForeColor = System.Drawing.Color.White;
             this.cbinactivo.Location = new System.Drawing.Point(306, 391);
             this.cbinactivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbinactivo.Name = "cbinactivo";
             this.cbinactivo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbinactivo.Size = new System.Drawing.Size(109, 32);
+            this.cbinactivo.Size = new System.Drawing.Size(119, 28);
             this.cbinactivo.TabIndex = 9;
             this.cbinactivo.Text = "Inactivo";
             this.cbinactivo.UseVisualStyleBackColor = false;
@@ -189,13 +191,13 @@
             this.cbactivo.AutoSize = true;
             this.cbactivo.BackColor = System.Drawing.Color.Transparent;
             this.cbactivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbactivo.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbactivo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbactivo.ForeColor = System.Drawing.Color.White;
-            this.cbactivo.Location = new System.Drawing.Point(321, 331);
+            this.cbactivo.Location = new System.Drawing.Point(320, 340);
             this.cbactivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbactivo.Name = "cbactivo";
             this.cbactivo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbactivo.Size = new System.Drawing.Size(94, 32);
+            this.cbactivo.Size = new System.Drawing.Size(102, 28);
             this.cbactivo.TabIndex = 8;
             this.cbactivo.Text = "Activo";
             this.cbactivo.UseVisualStyleBackColor = false;
@@ -216,11 +218,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(19, 234);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 28);
+            this.label4.Size = new System.Drawing.Size(70, 24);
             this.label4.TabIndex = 6;
             this.label4.Text = "Costo";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -240,11 +242,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(19, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 28);
+            this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tamaño";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -253,7 +255,7 @@
             // 
             this.txtnombredelproducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtnombredelproducto.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombredelproducto.Location = new System.Drawing.Point(24, 127);
+            this.txtnombredelproducto.Location = new System.Drawing.Point(24, 128);
             this.txtnombredelproducto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtnombredelproducto.Name = "txtnombredelproducto";
             this.txtnombredelproducto.Size = new System.Drawing.Size(408, 29);
@@ -263,11 +265,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 28);
+            this.label2.Size = new System.Drawing.Size(236, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre del producto";
             // 
@@ -275,11 +277,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(19, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 28);
+            this.label1.Size = new System.Drawing.Size(115, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Categoría";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -288,9 +290,9 @@
             // 
             this.btncancelar.BackColor = System.Drawing.Color.Red;
             this.btncancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncancelar.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.ForeColor = System.Drawing.Color.White;
-            this.btncancelar.Location = new System.Drawing.Point(398, 647);
+            this.btncancelar.Location = new System.Drawing.Point(398, 648);
             this.btncancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(117, 48);
@@ -303,9 +305,9 @@
             // 
             this.btnguardar.BackColor = System.Drawing.Color.Violet;
             this.btnguardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnguardar.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.ForeColor = System.Drawing.Color.Black;
-            this.btnguardar.Location = new System.Drawing.Point(266, 647);
+            this.btnguardar.Location = new System.Drawing.Point(266, 648);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(117, 48);
@@ -319,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CasaDeLasChaskas.Properties.Resources.Fondo;
-            this.ClientSize = new System.Drawing.Size(577, 1050);
+            this.ClientSize = new System.Drawing.Size(577, 711);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.panel1);

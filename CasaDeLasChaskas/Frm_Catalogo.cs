@@ -7,6 +7,8 @@ using System.IO;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Collections;
+using static System.Net.WebRequestMethods;
+using System.Runtime.CompilerServices;
 
 namespace CasaDeLasChaskas
 {
@@ -51,6 +53,7 @@ namespace CasaDeLasChaskas
                     Button boton = new Button();
                     string ruta = producto.Imagen;
                     boton.BackgroundImage = System.Drawing.Image.FromFile(ruta);
+                    boton.Click += (sender, e) => AgregarProducto(sender, e, producto.Producto,producto.Tamaño,producto.Precio,1,producto.No_Producto);
                     boton.BackgroundImageLayout = ImageLayout.Stretch;
                     boton.BackColor = Color.White;
                     boton.Font = new Font(boton.Font.FontFamily, 9);
@@ -59,6 +62,26 @@ namespace CasaDeLasChaskas
                     TablePanel.Controls.Add(boton);
                 }
             }
+
+        }
+        public void AgregarProducto(object sender, EventArgs e,string Producto,string Tamaño, decimal Precio,int cantidad, int ID)
+        {
+            bool existe = false;
+            foreach(DataGridViewRow fila in Carrito.Rows)
+            {
+                if (fila.Cells["Producto"].Value?.ToString() == Producto && fila.Cells["Tamaño"].Value?.ToString() == Tamaño && int.Parse(fila.Cells["ID"].Value?.ToString())==ID)
+                {
+                    int cantidadactual = int.Parse(fila.Cells["Cantidad"].Value.ToString());
+                    fila.Cells["Cantidad"].Value = cantidadactual + 1;
+                    existe = true;
+                }
+            }
+            if (existe==false)
+            {
+                Carrito.Rows.Add(ID,Producto, Tamaño, Precio, cantidad);
+            }
+            CalcularTotal();
+
         }
         public void CrearBotonesCategorias(List<Entidad_Categorias> categorias)
         {
@@ -76,17 +99,21 @@ namespace CasaDeLasChaskas
         }
         private void Frm_Catalogo_Load(object sender, EventArgs e)
         {
-            DateTime fecha = DateTime.Today;//1
-            fechaActual = fecha.ToString("yyyy-MM-dd");//1
-            //LblFecha.Text = fechaActual;//1
-            // Crear las columnas para el carrito
-            Carrito.Columns.Add("No_Producto", "No Producto");
+
+            Color colorOriginal = Color.FromArgb(68, 42, 4);
+            int alpha = (int)(255 * 0.69);
+            Color colorDesvanecido = Color.FromArgb(alpha, colorOriginal.R, colorOriginal.G, colorOriginal.B);
+            panel2.BackColor = colorDesvanecido;
+            DateTime fecha = DateTime.Today;
+            Carrito.RowHeadersVisible = false;
+            fechaActual = fecha.ToString("yyyy-MM-dd");
+            LblFecha.Text = fechaActual;
+            Carrito.Columns.Add("ID","ID");
             Carrito.Columns.Add("Producto", "Producto");
             Carrito.Columns.Add("Tamaño", "Tamaño");
             Carrito.Columns.Add("Precio", "Precio");
             Carrito.Columns.Add("Cantidad", "Cantidad");
-
-            // Crear botón para aumentar cantidad (+)
+            Carrito.Columns["ID"].Visible = false;
             DataGridViewButtonColumn btnSumar = new DataGridViewButtonColumn();
             btnSumar.Name = "Sumar";
             btnSumar.HeaderText = "Agregar";
@@ -94,21 +121,12 @@ namespace CasaDeLasChaskas
             btnSumar.UseColumnTextForButtonValue = true;
             Carrito.Columns.Add(btnSumar);
 
-            // Crear botón para disminuir cantidad (-)
             DataGridViewButtonColumn btnRestar = new DataGridViewButtonColumn();
             btnRestar.Name = "Restar";
             btnRestar.HeaderText = "Quitar";
             btnRestar.Text = "-";
             btnRestar.UseColumnTextForButtonValue = true;
             Carrito.Columns.Add(btnRestar);
-
-            // Crear botón para eliminar producto
-            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
-            btnEliminar.Name = "Eliminar";
-            btnEliminar.HeaderText = "Eliminar";
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseColumnTextForButtonValue = true;
-            Carrito.Columns.Add(btnEliminar);
             CrearBotonesCategorias(ControlCategorias.ObtenerCategorias());
         }
 
@@ -143,45 +161,8 @@ namespace CasaDeLasChaskas
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            // Limpiar todas las filas y columnas del DataGridView Carrito
             Carrito.Rows.Clear();
-            // Opcional: Limpiar el total mostrado
             txt_total.Text = "0.00";
-        }
-
-
-        private void Carrito_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                // Verificar si el clic fue en el botón de sumar, restar o eliminar
-                if (Carrito.Columns[e.ColumnIndex].Name == "Sumar")
-                {
-                    // Aumentar la cantidad
-                    int cantidadActual = Convert.ToInt32(Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value);
-                    Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value = cantidadActual + 1;
-                }
-                else if (Carrito.Columns[e.ColumnIndex].Name == "Restar")
-                {
-                    // Disminuir la cantidad, no permitir cantidades menores a 1
-                    int cantidadActual = Convert.ToInt32(Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value);
-                    if (cantidadActual > 1)
-                    {
-                        Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value = cantidadActual - 1;
-                    }
-                }
-                else if (Carrito.Columns[e.ColumnIndex].Name == "Eliminar")
-                {
-                    // Eliminar la fila seleccionada
-                    if (MessageBox.Show("¿Desea eliminar este producto del carrito?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        Carrito.Rows.RemoveAt(e.RowIndex);
-                    }
-                }
-
-                // Recalcular el total después de cualquier acción
-                CalcularTotal();
-            }
         }
 
         //Definir el evento PrintDocument y el diálogo de vista previa
@@ -190,47 +171,54 @@ namespace CasaDeLasChaskas
 
         public void GuardarVentas()
         {
-            int A = 0;
-            int totalFilas = Carrito.RowCount;
-            totalFilas = totalFilas - 1;//1
-            do//2
+            int limite = 0;
+            _Ventas.Fecha = LblFecha.Text;
+            _Ventas.Cliente = TxtCliente.Text;
+            ControlVentas.GuardarPreVenta(_Ventas);
+            limite = Carrito.RowCount-1;
+            int contador = 0;
+            foreach (DataGridViewRow fila in Carrito.Rows)
             {
-                if (A == totalFilas)//3
+                int ProductoID = int.Parse(fila.Cells["ID"].Value.ToString());
+                string Producto = fila.Cells["Producto"].Value.ToString();
+                int Cantidad = int.Parse(fila.Cells["Cantidad"].Value.ToString());
+                double Precio = double.Parse(fila.Cells["Precio"].Value.ToString());
+                string Fecha = _Ventas.Fecha.ToString();
+                string Cliente = _Ventas.Cliente.ToString();
+                string Tamaño = fila.Cells["Tamaño"].Value.ToString();
+                ControlVentas.GuardarVenta(ProductoID, Producto, Cantidad, Precio,Fecha,Cliente,Tamaño);
+                contador = contador + 1;
+                if(contador >= limite)
                 {
                     break;
                 }
-                else//4
-                {
-                    if (A == 0)
-                    {
-                        //_Ventas.Fecha = LblFecha.Text;
-                        _Ventas.Cliente = TxtCliente.Text;
-                    }
-                    _Ventas.PRODUCTO = int.Parse(Carrito.Rows[A].Cells[0].Value.ToString());
-                    _Ventas.Cantidad = int.Parse(Carrito.Rows[A].Cells[4].Value.ToString());
-                    _Ventas.Total = int.Parse(Carrito.Rows[A].Cells[4].Value.ToString()) * int.Parse(Carrito.Rows[A].Cells[3].Value.ToString());
-                    ControlVentas.GuardarVenta(_Ventas);
-                    _Ventas.Fecha = string.Empty;
-                    A = A + 1;
-                }
-            } while (A < totalFilas);
+            }
+
         }
         private void btn_imprimir_Click(object sender, EventArgs e)
         {
-            btn_imprimir.Enabled = false;
-            btn_cancelar.Enabled = false;
-            GuardarVentas();
-            printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
 
-            // Mostrar la vista previa antes de imprimir
-            printPreviewDialog.Document = printDocument;
-            printPreviewDialog.ShowDialog();
+            if (TxtCliente.Text == string.Empty)
+            {
+                MessageBox.Show("Este pedio no tiene cliente!!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                btn_imprimir.Enabled = false;
+                btn_cancelar.Enabled = false;
+                GuardarVentas();
+                printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
 
-            //Limpiar tabla y total
-            Carrito.Rows.Clear();
-            txt_total.Text = string.Empty;
-            TxtPaga.Text = string.Empty;
-            TxtCambio.Text = string.Empty;
+                // Mostrar la vista previa antes de imprimir
+                printPreviewDialog.Document = printDocument;
+                printPreviewDialog.ShowDialog();
+
+                //Limpiar tabla y total
+                Carrito.Rows.Clear();
+                txt_total.Text = string.Empty;
+                TxtPaga.Text = string.Empty;
+                TxtCambio.Text = string.Empty;
+            }
         }
         private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
@@ -334,6 +322,42 @@ namespace CasaDeLasChaskas
         private void button1_Click(object sender, EventArgs e)
         {
             CrearBotonesCategorias(ControlCategorias.ObtenerCategorias());
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Carrito_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (Carrito.Columns[e.ColumnIndex].Name == "Sumar")
+                {
+                    int cantidadActual = Convert.ToInt32(Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value);
+                    Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value = cantidadActual + 1;
+                }
+                else if (Carrito.Columns[e.ColumnIndex].Name == "Restar")
+                {
+                    int cantidadActual = Convert.ToInt32(Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value);
+                    if (cantidadActual > 1)
+                    {
+                        Carrito.Rows[e.RowIndex].Cells["Cantidad"].Value = cantidadActual - 1;
+                    }
+                }
+                CalcularTotal();
+            }
         }
     }
 }
