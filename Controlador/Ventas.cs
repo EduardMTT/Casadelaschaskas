@@ -15,9 +15,14 @@ namespace Controlador
         {
             enlace = new EnlaceVentas();
         }
-        public void GuardarVenta(Entidad_Ventas venta)
+        public void GuardarVenta(int Producto,string NombreProducto,int Cantidad,double Precio,string fecha, string Cliente, string Tamaño)
         {
-            enlace.GuardarVenta(venta);
+            double Total = Cantidad * Precio;
+            enlace.GuardarVENTA(Producto,NombreProducto,Cantidad,Total,fecha, Cliente,Tamaño,Precio);
+        }
+        public void GuardarPreVenta(Entidad_Ventas venta)
+        {
+            enlace.GuardarPreventa(venta);
         }
         public double VentasTotales(string Fecha)
         {

@@ -6,6 +6,7 @@ using Entidades;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Mysqlx.Cursor;
 
 namespace Conexion
 {
@@ -84,24 +85,17 @@ namespace Conexion
             }
             return Lista;
         }
-        public void GuardarVenta(Entidad_Ventas venta)
+        public void GuardarVENTA(int Producto,string NombreProducto,int Cantidad,double Total,string fecha, string Cliente, string Tamaño,double Precio)
         {
-            string Consulta;
-            if (venta.Fecha != string.Empty)
-            {
-                Consulta = string.Format("INSERT INTO Venta VALUES(NULL,'{0}','{1}')", venta.Fecha, venta.Cliente);
-                Conectar.EjecutarConsulta(Consulta);
-            }
             int ID = ObtenerUltimoIdInsertado();
-            Consulta = string.Format("INSERT INTO detalles_ventas VALUES({0},{1},' ',{2},{3})",ID,venta.PRODUCTO,venta.Cantidad,venta.Total);
+            string Consulta = string.Format("INSERT INTO detalles_ventas VALUES({0},{1},'{2}',{3},{4})",ID,Producto,NombreProducto,Cantidad,Total);
             Conectar.EjecutarConsulta(Consulta);
-            Consulta = "INSERT INTO registro_ventas (Fecha, Cliente, Producto, Precio, Tamaño, Cantidad_Producto, Total) " +
-                "SELECT v.Fecha, v.Cliente, " +
-                "p.Producto, p.Precio, p.Tamaño, " +
-                "dv.Cantidad_Producto, dv.Total " +
-                "FROM detalles_ventas dv " +
-                "JOIN venta v ON dv.FKID_Venta ="+ID+
-                " JOIN productos p ON dv.FKNo_Producto = p.No_Producto WHERE Cliente= '"+venta.Cliente+"' ORDER BY v.Fecha DESC;";
+            Consulta = string.Format("INSERT INTO registro_ventas VALUES(NULL,'{0}','{1}','{2}',{3},'{4}',{5},{6})",fecha,Cliente,NombreProducto,Precio,Tamaño,Cantidad,Total);
+            Conectar.EjecutarConsulta(Consulta);
+        }
+        public void GuardarPreventa(Entidad_Ventas venta)
+        {
+            string Consulta=string.Format("INSERT INTO Venta VALUES(NULL,'{0}','{1}');",venta.Fecha,venta.Cliente);
             Conectar.EjecutarConsulta(Consulta);
         }
         public double VentasTotales(string Fecha)
